@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Trirong:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Martel:wght@200;300;400;600;700&display=swap");
+
+/* Color's */
+
+$col1: #d5ffd0;
+$col2: #40f8ff;
+$col3: #279eff;
+$col4: #0c356a;
+
+// -- error
+
+$col-err1: #ffd0d0;
+$col-err2: #ff4040;
+$col-err3: #ff2727;
+$col-err4: #6a0c0c;
+
+// -- success
+
+$col-succ1: #d0ffd0;
+$col-succ2: #40ff40;
+$col-succ3: #27ff27;
+$col-succ4: #0c6a0c;
+
+/* Font Family */
+
+$quickSand: "Quicksand", sans-serif;
+$trirong: "Trirong", serif;
+$martel: "Martel", serif;

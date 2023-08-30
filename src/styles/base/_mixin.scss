@@ -1,0 +1,39 @@
+/* Flex */
+
+@mixin flex-row-between($jc: space-between, $al: center) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $jc;
+  align-items: $al;
+}
+@mixin flex-col-between($jc: space-between, $al: flex-start) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $jc;
+  align-items: $al;
+}
+@mixin flex($dr, $jc, $al) {
+  display: flex;
+  flex-direction: $dr;
+  justify-content: $jc;
+  align-items: $al;
+}
+
+/* Font */
+
+@mixin font($ff, $fs, $cl, $w, $p, $m) {
+  font-family: $ff;
+  font-size: $fs;
+  color: $cl;
+  font-weight: $w;
+  padding: $p;
+  margin: $m;
+}
+
+/* Media query */
+
+@mixin media-query($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
