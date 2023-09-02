@@ -5,7 +5,7 @@ const Projects = () => {
   const [imagesCarousel, setImagesCarousel] = useState(false);
 
   return (
-    <section className="projects" aria-label="Project's group">
+    <section className="projects" aria-label="Project's group" data-observer>
       <h1>Project's</h1>
       <div
         className="projects__container"

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    <section className="about-us" aria-label="About Us Section">
+    <section className="about-us" aria-label="About Us Section" data-observer>
       <h1>About Us</h1>
       <div className="about-us__card" aria-label="About us card container">
         <div

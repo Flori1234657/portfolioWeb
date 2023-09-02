@@ -1,4 +1,5 @@
 @use "../base/variables" as var;
+@use "../base/mixin" as mix;
 
 @mixin buttonPc($fs, $cl, $bg, $mg) {
   font-family: var.$quickSand;
@@ -12,4 +13,27 @@
   margin: $mg;
   text-align: center;
   cursor: pointer;
+}
+@mixin buttonMobIcon($fs, $cl, $bg, $mg) {
+  @include mix.flex(row, center, center);
+  font-size: $fs;
+  color: $cl;
+  background-color: $bg;
+  border-radius: 8px;
+  margin: $mg 0; // Ne kte menyr kemi InshaaAllah hapsir constante shih preview
+  svg {
+    margin: $mg; //fs(23) / 1.7 =~ 13.5 / 2 =~ 6.76 ne em =~ 0.29
+  }
+}
+@mixin buttonMobGjat($w: 100%, $fs, $cl, $bg, $p, $mg) {
+  width: $w;
+  font-family: var.$quickSand;
+  font-weight: 500;
+  font-size: 16px;
+  color: var.$col3;
+  background-color: white;
+  border-radius: 8px;
+  padding: $p 0; //fs(16) / 1.7 ~= 9.4 ne em ~= 0.6em kjo per btn te gjat
+  margin: $mg;
+  text-align: center;
 }

@@ -1,0 +1,83 @@
+@use "../../base/mixin" as mix;
+@use "../../base/functions" as func;
+@use "../../base/variables" as var;
+@use "../../components/button" as btn;
+
+header {
+  width: 100%;
+  @include mix.flex(row, center, center);
+  background-color: var.$col3;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  .phoneNavigation {
+    width: 90%;
+    @include mix.flex-row-between;
+    img {
+      width: 30%;
+    }
+    > button {
+      @include btn.buttonMobIcon(23px, var.$col3, white, 0.29em);
+    }
+    &__hiddenCont {
+      width: 70%;
+      position: absolute;
+      z-index: 10;
+      top: 49.63px;
+      right: 0;
+      background-color: var.$col3;
+      //   border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      @include mix.flex(column, center, center);
+      ul {
+        width: 90%;
+        border-radius: 8px;
+        @include mix.flex(column, center, center);
+        li {
+          @include mix.font(var.$quickSand, 16px, white, 500, 0.8em 0 0 0, 0);
+        }
+        .active-link::before {
+          transition: 0.4s;
+          content: "";
+          position: absolute;
+          width: 0.75em;
+          height: 2px;
+          background-color: var.$col1;
+          top: 22px;
+          left: 70px;
+          border-radius: 8px;
+        }
+        .active-link {
+          transition: 0.4s;
+          transform: translateX(-60%);
+          color: var.$col1;
+        }
+      }
+      div {
+        width: 85%;
+        @include mix.flex(column, center, center);
+        button {
+          @include btn.buttonMobGjat(
+            100%,
+            16px,
+            var.$col3,
+            white,
+            0.6em,
+            0 0 0.8em 0
+          );
+        }
+        button:first-child {
+          margin-top: 1em;
+        }
+        button:last-child {
+          background-color: var.$col3;
+          border: 1px solid white;
+          color: white;
+        }
+      }
+      display: none;
+    }
+  }
+}

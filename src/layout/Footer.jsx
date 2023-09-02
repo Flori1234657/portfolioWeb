@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="contact" data-observer>
       <section
         className="email-req"
         aria-label="Email request for work section"

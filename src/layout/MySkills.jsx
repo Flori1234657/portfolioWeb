@@ -2,7 +2,7 @@ import React from "react";
 
 const MySkills = () => {
   return (
-    <section className="my-skills" aria-label="My skills section">
+    <section className="my-skills" aria-label="My skills section" data-observer>
       <h1>My Skills</h1>
       <div
         className="my-skills__skills-cont --core-tech"

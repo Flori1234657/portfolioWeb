@@ -3,7 +3,7 @@ import Cards from "../components/sections/servicesSec/Cards";
 
 const Services = () => {
   return (
-    <section className="services" aria-label="Services section">
+    <section className="services" aria-label="Services section" data-observer>
       <h1>Services</h1>
       <section
         className="services__card-cont"

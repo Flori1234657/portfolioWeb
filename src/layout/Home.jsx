@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <section className="home" aria-label="Home section container">
+    <section className="home" aria-label="Home section container" data-observer>
       <section
         className="home__text-group"
         aria-label="Home section text and btn group"
