@@ -1,10 +1,15 @@
-import React from "react";
+import { MdNearbyError as ThirdIcn } from "react-icons/md";
+import { HiSquare3Stack3D as SecondIcn } from "react-icons/hi2";
+import { HiCode as FirstIcn } from "react-icons/hi";
 
 const Cards = () => {
   return (
     <>
       <div className="services__cardCont__card" aria-label="Card container 1">
-        <img src="" alt="Icon" />
+        <button>
+          {" "}
+          <FirstIcn />
+        </button>
         <div
           className="services__cardCont__card__right"
           aria-label="Card text and btn group"
@@ -18,7 +23,10 @@ const Cards = () => {
         </div>
       </div>
       <div className="services__cardCont__card" aria-label="Card container 2">
-        <img src="" alt="Icon" />
+        <button>
+          {" "}
+          <SecondIcn />
+        </button>
         <div
           className="services__cardCont__card__right"
           aria-label="Card text and btn group"
@@ -32,7 +40,10 @@ const Cards = () => {
         </div>
       </div>
       <div className="services__cardCont__card" aria-label="Card container 3">
-        <img src="" alt="Icon" />
+        <button>
+          {" "}
+          <ThirdIcn />
+        </button>
         <div
           className="services__cardCont__card__right"
           aria-label="Card text and btn group"

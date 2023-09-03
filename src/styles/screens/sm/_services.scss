@@ -1,3 +1,69 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+.services {
+  width: 100%;
+  background-color: var.$colDiv;
+  @include mix.flex-col-between($al: center);
+  h1 {
+    @include mix.font(var.$quickSand, 40px, var.$col3, 700, 0.8em 0 1.4em 0, 0);
+  }
+  .services__card-cont {
+    width: 90%;
+    @include mix.flex-col-between($al: center);
+    .services__cardCont__card {
+      width: 100%;
+      background-color: var.$col4;
+      border-radius: 8px;
+      @include mix.flex(row, space-around, flex-start);
+      font-size: 16px;
+      margin: 0 0 1em 0;
+      > button {
+        @include btn.buttonMobIcon(23px, var.$col4, var.$col1, 0.29em);
+        margin: 0.58em;
+        margin-top: 1em;
+      }
+      .services__cardCont__card__right {
+        width: 80%;
+        font-size: 23px;
+        margin-top: 1em;
+        @include mix.flex-col-between();
+        h3 {
+          @include mix.font(var.$quickSand, 19px, var.$col2, 600, 0, 0);
+        }
+        p {
+          @include mix.font(var.$quickSand, 13px, white, 400, 1em, 0);
+          padding-left: 0;
+        }
+        button {
+          @include btn.buttonMob(
+            13px,
+            var.$col4,
+            white,
+            0.84em 1.68em,
+            0.84em 0
+          );
+          margin-bottom: 1.9em;
+        }
+      }
+    }
+  }
+  .services__footer-text {
+    width: 90%;
+    @include mix.flex(column, center, center);
+    h2 {
+      @include mix.font(var.$quickSand, 28px, var.$col4, 700, 0, 1.5em 0 0 0);
+      text-align: center;
+    }
+    button {
+      @include btn.buttonMob(
+        13px,
+        white,
+        var.$col3,
+        0.85em 1.7em,
+        1.2em 0 5em 0
+      );
+    }
+  }
+}

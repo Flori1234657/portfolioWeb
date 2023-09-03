@@ -8,6 +8,7 @@ $col1: #d5ffd0;
 $col2: #40f8ff;
 $col3: #279eff;
 $col4: #0c356a;
+$colDiv: #ebebeb;
 
 // -- error
 
@@ -28,3 +29,8 @@ $col-succ4: #0c6a0c;
 $quickSand: "Quicksand", sans-serif;
 $trirong: "Trirong", serif;
 $martel: "Martel", serif;
+
+/* Box Shadow */
+
+$bxShadow1: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+  rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;

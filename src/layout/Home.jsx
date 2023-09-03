@@ -1,4 +1,4 @@
-import React from "react";
+import { HiArrowNarrowDown as ArrIcn } from "react-icons/hi";
 
 const Home = () => {
   return (
@@ -17,7 +17,9 @@ const Home = () => {
         <button>Hire Me</button>
       </section>
       <img src="" alt="Photo of the person" />
-      <h3>Scroll Down {/* ArrowIcon */}</h3>
+      <h3>
+        Scroll Down <ArrIcn />
+      </h3>
     </section>
   );
 };
