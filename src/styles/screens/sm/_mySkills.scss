@@ -10,5 +10,29 @@
     @include mix.font(var.$quickSand, 40px, var.$col3, 700, 0.8em 0 1.4em 0, 0);
   }
   .my-skills__skills-cont {
+    width: 90%;
+    @include mix.flex-row-between($jc: space-around);
+    border: 1px solid var.$col4;
+    border-radius: 8px;
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 2em;
+    img {
+      width: 20%;
+      font-size: 16px;
+      padding: 1em 0;
+    }
+    > h3 {
+      @include mix.font(var.$martel, 13px, var.$col4, 400, 0.5em, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(30%, -52%); // (x,y)
+      background-color: var.$colDiv;
+    }
+  }
+  button {
+    @include btn.buttonMob(13px, white, var.$col4, 0.85em 1.7em, 0);
+    margin-bottom: 2.5em;
   }
 }

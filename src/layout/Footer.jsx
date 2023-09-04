@@ -1,4 +1,10 @@
 import React from "react";
+import ProfileImg from "../assets/profile/footerPlaceholder.png";
+import {
+  BsFillTelephoneFill as PhoneIcn,
+  BsFacebook as FbIcn,
+} from "react-icons/bs";
+import { MdEmail as EmailIcn } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -14,7 +20,7 @@ const Footer = () => {
             placeholder="myname@example.exm"
             aria-label="Enter your email here"
           />
-          <button type="submit">Request</button>
+          <button type="submit">Inquiry</button>
         </form>
       </section>
       <section className="footer" aria-label="Footer info group">
@@ -22,7 +28,7 @@ const Footer = () => {
           className="footer__person"
           aria-label="Footer person profile group"
         >
-          <img src="" alt="Profile image" />
+          <img src={ProfileImg} alt="Profile image" />
           <div
             className="footer__person__text-info"
             aria-label="Footer text info group"
@@ -54,13 +60,22 @@ const Footer = () => {
           <h2>Contact</h2>
           <ul>
             <li>
-              <span>{/*Icon*/}</span> +355 68 839 3968
+              <span>
+                <PhoneIcn />
+              </span>{" "}
+              +355 68 839 3968
             </li>
             <li>
-              <span>{/*Icon*/}</span> floriandollani15@gmail.com
+              <span>
+                <EmailIcn />
+              </span>{" "}
+              floriandollani15@gmail.com
             </li>
             <li>
-              <span>{/*Icon*/}</span> Website profesionale
+              <span>
+                <FbIcn />
+              </span>{" "}
+              Website profesionale
             </li>
           </ul>
         </div>

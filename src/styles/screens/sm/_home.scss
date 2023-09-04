@@ -13,25 +13,25 @@ main {
       width: 100%;
       @include mix.flex(column, flex-start, flex-start);
       h1 {
-        @include mix.font(var.$quickSand, 33px, var.$col4, 700, 0, 1.5em 0 0 0);
+        @include mix.font(var.$quickSand, 28px, var.$col4, 700, 0, 1.5em 0 0 0);
         span {
           color: var.$col3;
         }
       }
       p {
-        @include mix.font(var.$trirong, 16px, black, 500, 0.5em 0, 0);
+        @include mix.font(var.$trirong, 13px, black, 500, 0.5em 0, 0);
       }
       button {
-        @include btn.buttonMob(16px, white, var.$col3, 0.8em 1.6em, 0);
+        @include btn.buttonMob(13px, white, var.$col3, 0.85em 1.7em, 0);
       }
     }
     img {
       padding: 5rem 0;
     }
     h3 {
-      @include mix.font(var.$quickSand, 16px, var.$col4, 500, 0, 0 0 3.5em 0);
+      @include mix.font(var.$quickSand, 13px, var.$col4, 500, 0, 0 0 3.2em 0);
       svg {
-        font-size: 19px;
+        font-size: 16px;
         transform: translateY(20%);
       }
     }
