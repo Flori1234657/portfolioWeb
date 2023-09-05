@@ -5,7 +5,8 @@
 main {
   width: 100%;
   @include mix.flex(column, flex-start, center);
-  margin-top: 50px;
+  font-size: var.$sizeP-max599;
+  margin-top: 3.125em;
   .home {
     width: 90%;
     @include mix.flex(column, flex-start, center);
@@ -13,25 +14,54 @@ main {
       width: 100%;
       @include mix.flex(column, flex-start, flex-start);
       h1 {
-        @include mix.font(var.$quickSand, 28px, var.$col4, 700, 0, 1.5em 0 0 0);
+        @include mix.font(
+          var.$quickSand,
+          var.$size2-max599,
+          var.$col4,
+          700,
+          0,
+          1.5em 0 0 0
+        );
         span {
           color: var.$col3;
         }
       }
       p {
-        @include mix.font(var.$trirong, 13px, black, 500, 0.5em 0, 0);
+        @include mix.font(
+          var.$trirong,
+          var.$size3-max599,
+          black,
+          500,
+          0.5em 0,
+          0
+        );
       }
       button {
-        @include btn.buttonMob(13px, white, var.$col3, 0.85em 1.7em, 0);
+        @include btn.buttonMob(
+          var.$size3-max599,
+          white,
+          var.$col3,
+          0.85em 1.7em,
+          0,
+          0.61em
+        );
       }
     }
     img {
-      padding: 5rem 0;
+      font-size: var.$sizeP-max599;
+      padding: 5em 0;
     }
     h3 {
-      @include mix.font(var.$quickSand, 13px, var.$col4, 500, 0, 0 0 3.2em 0);
+      @include mix.font(
+        var.$quickSand,
+        var.$size3-max599,
+        var.$col4,
+        500,
+        0,
+        0 0 3.2em 0
+      );
       svg {
-        font-size: 16px;
+        font-size: var.$sizeP-max599;
         transform: translateY(20%);
       }
     }

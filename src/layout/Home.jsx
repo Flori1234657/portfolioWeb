@@ -11,8 +11,8 @@ const Home = () => {
           Hey, I'm <span>Florian Dollani</span>,<br /> a freelance web developer
         </h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy{" "}
+          Do you want a web for your business?Or do you want a web for youself?
+          I think you are on the right place!
         </p>
         <button>Hire Me</button>
       </section>

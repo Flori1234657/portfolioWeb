@@ -18,36 +18,51 @@ header {
       width: 30%;
     }
     > button {
-      @include btn.buttonMobIcon(23px, var.$col3, white, 0.29em);
+      @include btn.buttonMobIcon(
+        var.$size1-max599,
+        var.$col3,
+        white,
+        0.29em,
+        0.34em
+      ); //dmth 8px
     }
     &__hiddenCont {
       width: 70%;
       position: absolute;
       z-index: 10;
-      top: 49.63px;
+      font-size: var.$sizeP-max599;
+      top: 3em;
       right: 0;
       background-color: var.$col3;
       //   border-top-left-radius: 8px;
-      border-bottom-left-radius: 8px;
+      border-bottom-left-radius: 0.5em;
       @include mix.flex(column, center, center);
       box-shadow: var.$bxShadow1;
       ul {
         width: 90%;
-        border-radius: 8px;
+        border-radius: 0.5em;
         @include mix.flex(column, center, center);
         li {
-          @include mix.font(var.$quickSand, 16px, white, 500, 0.8em 0 0 0, 0);
+          @include mix.font(
+            var.$quickSand,
+            var.$sizeP-max599,
+            white,
+            500,
+            0.8em 0 0 0,
+            0
+          );
         }
         .active-link::before {
           transition: 0.4s;
           content: "";
           position: absolute;
+          font-size: var.$sizeP-max599;
           width: 0.75em;
-          height: 2px;
+          height: 0.125em;
           background-color: var.$col1;
-          top: 22px;
-          left: 70px;
-          border-radius: 8px;
+          top: 1.375em;
+          left: 4.375em;
+          border-radius: 0.5em;
         }
         .active-link {
           transition: 0.4s;
@@ -61,11 +76,12 @@ header {
         button {
           @include btn.buttonMobGjat(
             100%,
-            16px,
+            var.$sizeP-max599,
             var.$col3,
             white,
             0.6em,
-            0 0 0.8em 0
+            0 0 0.8em 0,
+            0.5em
           );
         }
         button:first-child {
@@ -73,7 +89,7 @@ header {
         }
         button:last-child {
           background-color: var.$col3;
-          border: 1px solid white;
+          border: 0.08em solid white;
           color: white;
         }
       }

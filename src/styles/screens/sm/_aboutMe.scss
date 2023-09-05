@@ -6,13 +6,20 @@
   width: 90%;
   @include mix.flex(column, flex-start, center);
   h1 {
-    @include mix.font(var.$quickSand, 40px, var.$col4, 700, 0.8em 0 1.4em 0, 0);
+    @include mix.font(
+      var.$quickSand,
+      var.$size4-max599,
+      var.$col4,
+      700,
+      0.8em 0 1.4em 0,
+      0
+    );
   }
   .about-us__card {
     width: 100%;
-    border-radius: 8px;
+    font-size: var.$sizeP-max599;
+    border-radius: 0.5em;
     background-color: var.$col3;
-    font-size: 16px;
     @include mix.flex(column, flex-start, center);
     margin-bottom: 3.5em;
     .about-us__card__left-cont {
@@ -22,20 +29,27 @@
       .about-us__card__left-cont__img-perkohshem {
         width: 70%;
         aspect-ratio: 1;
-        font-size: 19px;
+        font-size: var.$size5-max599;
         background-color: var.$col1;
         border: 0.5em solid var.$col4;
         border-radius: 50%;
         margin-top: 2.5em;
       }
       button {
-        @include btn.buttonMob(13px, white, var.$col4, 0.85em 1.7em, 0);
+        @include btn.buttonMob(
+          var.$size3-max599,
+          white,
+          var.$col4,
+          0.85em 1.7em,
+          0,
+          0.61em
+        );
         transform: translateY(-65%);
       }
-      border-bottom: 1px solid var.$col1;
+      border-bottom: 0.09em solid var.$col1;
     }
     p {
-      @include mix.font(var.$martel, 13px, white, 600, 2em 2em, 0);
+      @include mix.font(var.$martel, var.$size3-max599, white, 600, 2em 2em, 0);
       padding-bottom: 3.5em;
       span {
         color: var.$col4;

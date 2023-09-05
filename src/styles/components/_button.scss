@@ -1,49 +1,49 @@
 @use "../base/variables" as var;
 @use "../base/mixin" as mix;
 
-@mixin buttonPc($fs, $cl, $bg, $mg) {
+@mixin buttonPc($fs, $cl, $bg, $mg, $br) {
   font-family: var.$quickSand;
   font-weight: 600;
   font-size: $fs;
   color: $cl;
   background-color: $bg;
   border: none;
-  border-radius: 8px;
+  border-radius: $br;
   padding: ($fs / 1.2 + 0.5) ($fs / 1.2 + 0.5 * 2);
   margin: $mg;
   text-align: center;
   cursor: pointer;
 }
-@mixin buttonMobIcon($fs, $cl, $bg, $mg) {
+@mixin buttonMobIcon($fs, $cl, $bg, $mg, $br) {
   @include mix.flex(row, center, center);
   font-size: $fs;
   color: $cl;
   background-color: $bg;
-  border-radius: 8px;
+  border-radius: $br;
   margin: $mg 0; // Ne kte menyr kemi InshaaAllah hapsir constante shih preview
   svg {
     margin: $mg; //fs(23) / 1.7 =~ 13.5 / 2 =~ 6.76 ne em =~ 0.29
   }
 }
-@mixin buttonMobGjat($w: 100%, $fs, $cl, $bg, $p, $mg) {
+@mixin buttonMobGjat($w: 100%, $fs, $cl, $bg, $p, $mg, $br) {
   width: $w;
   font-family: var.$quickSand;
   font-weight: 500;
   font-size: $fs;
   color: $cl;
   background-color: $bg;
-  border-radius: 8px;
+  border-radius: $br;
   padding: $p 0; //fs(16) / 1.7 ~= 9.4 ne em ~= 0.6em kjo per btn te gjat
   margin: $mg;
   text-align: center;
 }
-@mixin buttonMob($fs, $cl, $bg, $p, $mg) {
+@mixin buttonMob($fs, $cl, $bg, $p, $mg, $br) {
   font-family: var.$quickSand;
   font-weight: 500;
   font-size: $fs;
   color: $cl;
   background-color: $bg;
-  border-radius: 8px;
+  border-radius: $br;
   padding: $p;
   margin: $mg;
   text-align: center;

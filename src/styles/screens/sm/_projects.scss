@@ -5,34 +5,55 @@
 .projects {
   width: 100%;
   @include mix.flex-col-between($al: center);
-  font-size: 16px;
+  font-size: var.$sizeP-max599;
   margin-bottom: 2em;
   h1 {
-    @include mix.font(var.$quickSand, 40px, var.$col4, 700, 0.8em 0 1.4em 0, 0);
+    @include mix.font(
+      var.$quickSand,
+      var.$size4-max599,
+      var.$col4,
+      700,
+      0.8em 0 1.4em 0,
+      0
+    );
   }
   .projects__container {
     width: 90%;
     @include mix.flex-col-between($al: center);
     // border: 1px solid var.$col4;
-    border-radius: 8px;
-    font-size: 16px;
+    font-size: var.$sizeP-max599;
+    border-radius: 0.5em;
     margin-bottom: 1.5em;
     box-shadow: var.$bxShadow1;
     background-color: var.$colDiv;
     img {
       width: 90%;
-      font-size: 16px;
+      font-size: var.$sizeP-max599;
       margin: 1em 0;
-      border-radius: 8px;
+      border-radius: 0.5em;
     }
     .projects__container__txt-and-btn-info-cont {
       width: 90%;
       @include mix.flex-col-between($al: center);
       h3 {
-        @include mix.font(var.$quickSand, 23px, var.$col3, 600, 0, 0);
+        @include mix.font(
+          var.$quickSand,
+          var.$size1-max599,
+          var.$col3,
+          600,
+          0,
+          0
+        );
       }
       p {
-        @include mix.font(var.$martel, 13px, var.$col4, 600, 1.23em 0, 0);
+        @include mix.font(
+          var.$martel,
+          var.$size3-max599,
+          var.$col4,
+          600,
+          1.23em 0,
+          0
+        );
         text-align: center;
       }
       .projects__container__txt-and-btn-info-cont__btns-cont {
@@ -40,11 +61,12 @@
         @include mix.flex-row-between();
         button {
           @include btn.buttonMob(
-            13px,
+            var.$size3-max599,
             white,
             var.$col3,
             0.85em 1.7em,
-            0 0 1.23em 0
+            0 0 1.23em 0,
+            0.61em
           );
         }
       }

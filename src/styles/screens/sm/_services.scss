@@ -7,7 +7,14 @@
   background-color: var.$colDiv;
   @include mix.flex-col-between($al: center);
   h1 {
-    @include mix.font(var.$quickSand, 40px, var.$col3, 700, 0.8em 0 1.4em 0, 0);
+    @include mix.font(
+      var.$quickSand,
+      var.$size4-max599,
+      var.$col3,
+      700,
+      0.8em 0 1.4em 0,
+      0
+    );
   }
   .services__card-cont {
     width: 90%;
@@ -15,34 +22,55 @@
     .services__cardCont__card {
       width: 100%;
       background-color: var.$col4;
-      border-radius: 8px;
+      font-size: var.$sizeP-max599;
+      border-radius: 0.5em;
       @include mix.flex(row, space-around, flex-start);
-      font-size: 16px;
       margin: 0 0 1em 0;
       > button {
-        @include btn.buttonMobIcon(23px, var.$col4, var.$col1, 0.29em);
+        @include btn.buttonMobIcon(
+          var.$size1-max599,
+          var.$col4,
+          var.$col1,
+          0.29em,
+          0.34em
+        );
         margin: 0.58em;
         margin-top: 1em;
       }
       .services__cardCont__card__right {
         width: 80%;
-        font-size: 23px;
+        font-size: var.$size1-max599;
         margin-top: 1em;
         @include mix.flex-col-between();
         h3 {
-          @include mix.font(var.$quickSand, 19px, var.$col2, 600, 0, 0);
+          @include mix.font(
+            var.$quickSand,
+            var.$size5-max599,
+            var.$col2,
+            600,
+            0,
+            0
+          );
         }
         p {
-          @include mix.font(var.$quickSand, 13px, white, 400, 1em, 0);
+          @include mix.font(
+            var.$quickSand,
+            var.$size3-max599,
+            white,
+            400,
+            1em,
+            0
+          );
           padding-left: 0;
         }
         button {
           @include btn.buttonMob(
-            13px,
+            var.$size3-max599,
             var.$col4,
             white,
             0.84em 1.68em,
-            0.84em 0
+            0.84em 0,
+            0.61em
           );
           margin-bottom: 1.9em;
         }
@@ -53,16 +81,24 @@
     width: 90%;
     @include mix.flex(column, center, center);
     h2 {
-      @include mix.font(var.$quickSand, 28px, var.$col4, 700, 0, 1.5em 0 0 0);
+      @include mix.font(
+        var.$quickSand,
+        var.$size2-max599,
+        var.$col4,
+        700,
+        0,
+        1.5em 0 0 0
+      );
       text-align: center;
     }
     button {
       @include btn.buttonMob(
-        13px,
+        var.$size3-max599,
         white,
         var.$col3,
         0.85em 1.7em,
-        1.2em 0 5em 0
+        1.2em 0 5em 0,
+        0.61em
       );
     }
   }
