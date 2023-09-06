@@ -1,3 +1,30 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  header {
+    .phoneNavigation {
+      width: 85%;
+      > button {
+        font-size: var.$size1-max899;
+      }
+      &__hiddenCont {
+        font-size: var.$sizeP-max899;
+        ul {
+          li {
+            font-size: var.$sizeP-max899;
+          }
+          .active-link::before {
+            font-size: var.$sizeP-max899;
+          }
+        }
+        div {
+          button {
+            font-size: var.$sizeP-max899;
+          }
+        }
+      }
+    }
+  }
+}

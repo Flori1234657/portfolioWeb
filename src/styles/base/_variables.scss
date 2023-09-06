@@ -37,9 +37,19 @@ $bxShadow1: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
   rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 
 /* Font size's */
+
+// SM
 $size1-max599: clamp(1.44rem, calc(0.22rem + 6.09vw), 2.5rem); // 23-40
 $size2-max599: clamp(1.75rem, calc(0.32rem + 7.17vw), 3rem); // 28-48
 $size3-max599: clamp(0.81rem, calc(0.1rem + 3.58vw), 1.44rem); // 13-23
 $size4-max599: clamp(2.5rem, calc(0.42rem + 10.39vw), 4.31rem); // 40-69
 $size5-max599: clamp(1.19rem, calc(0.18rem + 5.02vw), 2.06rem); // 19-33
 $sizeP-max599: clamp(1rem, calc(0.14rem + 4.3vw), 1.75rem); // 16-28
+
+// MD
+$size1-max899: clamp(2.06rem, calc(0.18rem + 5.02vw), 3rem); // 33-48
+$size2-max899: clamp(2.5rem, calc(0.37rem + 5.69vw), 3.56rem); // 40-57
+$size3-max899: clamp(1.19rem, calc(0.06rem + 3.01vw), 1.75rem); // 19-28
+$size4-max899: clamp(3.56rem, calc(0.3rem + 8.7vw), 5.19rem); // 57-83
+$size5-max899: clamp(1.75rem, calc(0.24rem + 4.01vw), 2.5rem); // 28-40
+$sizeP-max899: clamp(1.44rem, calc(0.18rem + 3.34vw), 2.06rem); // 23-33

@@ -1,3 +1,27 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  .about-us {
+    width: 85%;
+    h1 {
+      font-size: var.$size4-max899;
+    }
+    .about-us__card {
+      font-size: var.$sizeP-max899;
+      .about-us__card__left-cont {
+        // ky posht InshaaAllah eshte sa per divin e perkohshem sa te bej foton
+        .about-us__card__left-cont__img-perkohshem {
+          font-size: var.$size5-max899;
+        }
+        button {
+          font-size: var.$size3-max899;
+        }
+      }
+      p {
+        font-size: var.$size3-max899;
+      }
+    }
+  }
+}

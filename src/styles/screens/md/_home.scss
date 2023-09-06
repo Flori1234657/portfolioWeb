@@ -1,3 +1,32 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  main {
+    font-size: var.$sizeP-max899;
+    .home {
+      width: 85%;
+      .home__text-group {
+        h1 {
+          font-size: var.$size2-max899;
+        }
+        p {
+          font-size: var.$size3-max899;
+        }
+        button {
+          font-size: var.$size3-max899;
+        }
+      }
+      img {
+        font-size: var.$sizeP-max899;
+      }
+      h3 {
+        font-size: var.$size3-max899;
+        svg {
+          font-size: var.$sizeP-max899;
+        }
+      }
+    }
+  }
+}

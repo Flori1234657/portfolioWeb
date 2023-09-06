@@ -1,3 +1,52 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  footer {
+    .email-req {
+      width: 85%;
+      h1 {
+        font-size: var.$size1-max899;
+      }
+      form {
+        input {
+          font-size: var.$size3-max899;
+        }
+        button {
+          font-size: var.$size3-max899;
+        }
+      }
+    }
+    .footer {
+      .footer__person {
+        .footer__person__text-info {
+          h2 {
+            font-size: var.$size5-max899;
+          }
+          h3 {
+            font-size: var.$sizeP-max899;
+          }
+        }
+      }
+      .footer__nav,
+      .footer__services,
+      .footer__contact {
+        h2 {
+          font-size: var.$sizeP-max899;
+        }
+        ul {
+          li {
+            font-size: var.$size3-max899;
+          }
+        }
+      }
+    }
+    .copyright {
+      font-size: var.$sizeP-max899;
+      h2 {
+        font-size: var.$size3-max899;
+      }
+    }
+  }
+}
