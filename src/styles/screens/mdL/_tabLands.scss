@@ -1,0 +1,18 @@
+@use "../../base/mixin" as mix;
+@use "./home" as home;
+@use "./services" as services;
+@use "./aboutMe" as aboutMe;
+@use "./mySkills" as mySkills;
+@use "./projects" as projects;
+@use "./footer" as footer;
+@use "./nav" as nav;
+
+@media screen and (min-width: 900px) and (orientation: Landscape) {
+  @include nav.styles;
+  @include home.styles;
+  @include services.styles;
+  @include aboutMe.styles;
+  @include mySkills.styles;
+  @include projects.styles;
+  @include footer.styles;
+}

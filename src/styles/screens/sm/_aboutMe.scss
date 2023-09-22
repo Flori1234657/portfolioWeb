@@ -52,7 +52,7 @@
       @include mix.font(var.$martel, var.$size3-max599, white, 600, 2em 2em, 0);
       padding-bottom: 3.5em;
       span {
-        color: var.$col4;
+        color: var.$colCopyrightBanner;
         font-weight: 600;
         text-decoration: underline;
       }

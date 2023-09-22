@@ -1,15 +1,14 @@
 @use "../base/variables" as var;
 @use "../base/mixin" as mix;
 
-@mixin buttonPc($fs, $cl, $bg, $mg, $br) {
+@mixin buttonPc($fs, $cl, $bg, $p, $mg, $br) {
   font-family: var.$quickSand;
   font-weight: 600;
   font-size: $fs;
   color: $cl;
   background-color: $bg;
-  border: none;
   border-radius: $br;
-  padding: ($fs / 1.2 + 0.5) ($fs / 1.2 + 0.5 * 2);
+  padding: $p;
   margin: $mg;
   text-align: center;
   cursor: pointer;

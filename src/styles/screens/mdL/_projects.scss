@@ -1,0 +1,53 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as var;
+@use "../../components/button" as btn;
+@mixin styles {
+  .projects {
+    font-size: var.$sizeP-max1199;
+    margin-bottom: 3em;
+    h1 {
+      font-size: var.$size4-max1199;
+      margin: 0.3em 0;
+      padding: 0.5em;
+    }
+    .projects__container {
+      width: 70%;
+      font-size: var.$sizeP-max1199;
+      border-radius: 0.42em;
+      margin-bottom: 1.2em;
+      @include mix.flex-row-between;
+      img {
+        width: 40%;
+        aspect-ratio: 1.25;
+        font-size: var.$sizeP-max1199;
+        border-radius: 0.42em;
+        margin: 1.2em;
+        margin-right: 0;
+      }
+      .projects__container__txt-and-btn-info-cont {
+        width: 60%;
+        font-size: var.$sizeP-max1199;
+        padding: 1.2em;
+        h3 {
+          font-size: var.$size5-max1199;
+        }
+        p {
+          font-size: var.$size6-max1199;
+        }
+        .projects__container__txt-and-btn-info-cont__btns-cont {
+          button {
+            font-size: var.$size6-max1199;
+            padding: 0.85em 1.7em;
+            border-radius: 0.5em;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .projects__container:nth-child(3) {
+      img {
+        order: 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as var;
+@use "../../components/button" as btn;
+
+@mixin styles {
+  .contact {
+    .email-req {
+      h1 {
+        font-size: var.$size1-max1199;
+        padding: 1.4em 6em;
+      }
+      form {
+        flex-direction: row;
+        align-items: flex-end;
+        width: 55%;
+        font-size: var.$sizeP-max1199;
+        margin-bottom: 2.1em;
+        input {
+          font-size: var.$size3-max1199;
+          width: 60%;
+          padding: 0;
+          border-bottom: 0.06em solid white;
+        }
+        button {
+          font-size: var.$size6-max1199;
+          margin: 0;
+          padding: 0.84em 1.68em;
+          border-radius: 0.61em;
+        }
+      }
+    }
+    .footer {
+      width: 85%;
+      flex-direction: row;
+      font-size: var.$sizeP-max1199;
+      padding: 2.1em 0;
+      border-top: 0.05em solid white;
+      position: relative;
+      &::after {
+        content: "";
+        width: 8.7%;
+        height: 0.05em;
+        background-color: white;
+        position: absolute;
+        right: 0;
+        top: -0.05em;
+        transform: translateX(100%);
+      }
+      &::before {
+        content: "";
+        width: 8.9%;
+        height: 0.05em;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: -0.05em;
+        transform: translateX(-100%);
+      }
+      .footer__person {
+        width: 29%;
+        align-items: flex-start;
+        .footer__person__text-info {
+          h2 {
+            font-size: var.$sizeP-max1199;
+          }
+          h3 {
+            font-size: var.$size3-max1199;
+          }
+        }
+      }
+      .footer__nav,
+      .footer__services,
+      .footer__contact {
+        width: 26%;
+        h2 {
+          font-size: var.$size3-max1199;
+          padding-top: 0;
+        }
+        ul {
+          li {
+            font-size: var.$size6-max1199;
+          }
+        }
+      }
+      .footer__nav {
+        width: 11%;
+      }
+      .footer__services {
+        width: 23%;
+      }
+    }
+    .copyright {
+      font-size: var.$sizeP-max1199;
+      margin-top: 0;
+      h2 {
+        font-size: var.$size3-max1199;
+      }
+    }
+  }
+}

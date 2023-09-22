@@ -53,3 +53,12 @@ $size3-max899: clamp(1.19rem, calc(0.06rem + 3.01vw), 1.75rem); // 19-28
 $size4-max899: clamp(3.56rem, calc(0.3rem + 8.7vw), 5.19rem); // 57-83
 $size5-max899: clamp(1.75rem, calc(0.24rem + 4.01vw), 2.5rem); // 28-40
 $sizeP-max899: clamp(1.44rem, calc(0.18rem + 3.34vw), 2.06rem); // 23-33
+
+// MDL
+$size1-max1199: clamp(1.75rem, 0.81rem + 1.67vw, 2.06rem); // 28-33
+$size2-max1199: clamp(2.06rem, 0.75rem + 2.34vw, 2.5rem); // 33-40
+$size3-max1199: clamp(1rem, 0.44rem + 1vw, 1.19rem); // 16-19
+$size4-max1199: clamp(3rem, 1.31rem + 3.01vw, 3.56rem); // 48-57
+$size5-max1199: clamp(1.44rem, 0.5rem + 1.67vw, 1.75rem); // 23-28
+$size6-max1199: clamp(0.81rem, 0.25rem + 1vw, 1rem); // 13-16
+$sizeP-max1199: clamp(1.19rem, 0.43rem + 1.34vw, 1.44rem); // 19-23

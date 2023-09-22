@@ -1,0 +1,51 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as var;
+@use "../../components/button" as btn;
+@mixin styles {
+  main {
+    font-size: var.$size6-max1199;
+    .home {
+      width: 85%;
+      display: grid;
+      grid-template: repeat(2, auto) / repeat(2, auto);
+      .home__text-group {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 60%;
+        h1 {
+          font-size: var.$size2-max1199;
+          margin-top: 2.24em;
+        }
+        p {
+          font-size: var.$size3-max1199;
+        }
+        button {
+          @include btn.buttonPc(
+            var.$size3-max1199,
+            white,
+            var.$col3,
+            0.81em 1.62em,
+            0 0 4.62em 0,
+            0.5em
+          );
+        }
+      }
+      img {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        font-size: var.$size6-max1199;
+        padding: 0;
+      }
+      h3 {
+        grid-column: 1/3;
+        grid-row: 2/3;
+        font-size: var.$size3-max1199;
+        margin: 0 auto;
+        margin-bottom: 2em;
+        svg {
+          font-size: var.$sizeP-max1199;
+        }
+      }
+    }
+  }
+}

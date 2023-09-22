@@ -1,9 +1,10 @@
 import React from "react";
+import Logo from "../assets/logo/logo.png";
 
 const OptPc = () => {
   return (
     <nav className="pcNavigation">
-      <img src="" alt="Logo" />
+      <img src={Logo} alt="Logo" />
       <ul>
         <li>Home</li>
         <li>Services</li>

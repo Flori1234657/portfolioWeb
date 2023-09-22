@@ -1,0 +1,52 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as var;
+@use "../../components/button" as btn;
+@mixin styles {
+  .my-skills {
+    h1 {
+      font-size: var.$size4-max1199;
+      margin: 0.3em 0;
+      padding: 0.5em;
+    }
+    .my-skills__skills-cont {
+      width: 40%;
+      font-size: var.$sizeP-max1199;
+      border-radius: 0.42em;
+      h3 {
+        font-size: var.$size3-max1199;
+      }
+      img {
+        font-size: var.$sizeP-max1199;
+        padding: 1.2em 0;
+      }
+      .my-skills__skills-cont__names-gr {
+        @include mix.flex-col-between;
+        position: absolute;
+        right: 0;
+        transform: translateX(125%);
+        h3 {
+          @include mix.font(
+            var.$martel,
+            var.$size3-max1199,
+            var.$col4,
+            600,
+            0,
+            0
+          );
+        }
+      }
+    }
+    .my-skills__skills-cont.--core-tech {
+      transform: translateX(-35%);
+    }
+    .my-skills__skills-cont.--others {
+      transform: translateX(-35%);
+      margin-bottom: 0;
+    }
+    button {
+      font-size: var.$size3-max1199;
+      padding: 0.81em 1.62em;
+      margin: 3.5em;
+    }
+  }
+}

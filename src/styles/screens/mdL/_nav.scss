@@ -1,0 +1,55 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as var;
+@use "../../components/button" as btn;
+@mixin styles {
+  header {
+    width: 100%;
+    @include mix.flex(row, center, center);
+    background-color: var.$col3;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    box-shadow: var.$bxShadow1;
+    .pcNavigation {
+      width: 85%;
+      @include mix.flex-row-between;
+      img {
+        width: 10%;
+      }
+      ul {
+        width: 50%;
+        @include mix.flex-row-between;
+        li {
+          @include mix.font(
+            var.$quickSand,
+            var.$size6-max1199,
+            white,
+            600,
+            1.85em 0,
+            0
+          );
+        }
+      }
+      div {
+        width: 29.5%;
+        @include mix.flex-row-between;
+        button {
+          @include btn.buttonPc(
+            var.$size6-max1199,
+            white,
+            var.$col3,
+            0.85em 1.7em,
+            0,
+            0.61em
+          );
+          box-shadow: inset 0px 0px 0px 0.08em white;
+          -webkit-tap-highlight-color: none;
+        }
+        button:first-child {
+          background-color: white;
+          color: var.$col4;
+        }
+      }
+    }
+  }
+}

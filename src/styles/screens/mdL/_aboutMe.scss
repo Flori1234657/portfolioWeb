@@ -1,0 +1,41 @@
+@use "../../base/mixin" as mix;
+@use "../../base/variables" as var;
+@use "../../components/button" as btn;
+
+@mixin styles {
+  .about-us {
+    h1 {
+      font-size: var.$size4-max1199;
+      margin: 0.3em 0;
+      padding: 0.5em;
+    }
+    .about-us__card {
+      width: 85%;
+      font-size: var.$sizeP-max1199;
+      @include mix.flex-row-between;
+      border-radius: 0.42em;
+      padding: 0.7em 0;
+      box-shadow: var.$bxShadow1;
+      margin-bottom: 3em;
+      p {
+        width: 70%;
+        font-size: var.$size6-max1199;
+        padding-bottom: 2em;
+      }
+      .about-us__card__left-cont {
+        width: 30%;
+        border-bottom: none;
+        border-right: 0.05em solid var.$col1;
+        .about-us__card__left-cont__img-perkohshem {
+          font-size: var.$sizeP-max1199;
+          border-width: 0.42em;
+        }
+        button {
+          font-size: var.$size6-max1199;
+          padding: 0.85em 1.7em;
+          transform: translateY(-70%);
+        }
+      }
+    }
+  }
+}
