@@ -1,3 +1,57 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  .services {
+    h1 {
+      font-size: var.$size4-max1799;
+      margin: 0.8em 0;
+      padding: 0;
+    }
+    .services__card-cont {
+      width: 85%;
+      max-width: 1529.14px; // End-Breakpoint InshaaAllah
+      @include mix.flex-row-between;
+      .services__cardCont__card {
+        width: 32%;
+        font-size: var.$size6-max1799;
+        border-radius: 0.5em;
+        > button {
+          font-size: var.$size5-max1799;
+          border-radius: 0.3em;
+        }
+        .services__cardCont__card__right {
+          font-size: var.$size5-max1799;
+          h3 {
+            font-size: var.$sizeP-max1799;
+            padding-right: 0.5em;
+          }
+          p {
+            font-size: var.$size6-max1799;
+          }
+          button {
+            font-size: var.$size6-max1799;
+            padding: 0.81em 1.62em;
+            margin-bottom: 1.75em;
+            border-radius: 0.5em;
+          }
+        }
+      }
+    }
+    .services__footer-text {
+      width: 70%;
+      max-width: 1259.3px; // End-Breakpoint InshaaAllah
+      h2 {
+        font-size: var.$size2-max1799;
+        margin-top: 3em;
+      }
+      button {
+        font-size: var.$size6-max1799;
+        padding: 0.81em 1.62em;
+        border-radius: 0.5em;
+        margin: 1.4em 0 7.5em 0;
+      }
+    }
+  }
+}

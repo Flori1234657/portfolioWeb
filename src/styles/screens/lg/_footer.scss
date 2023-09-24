@@ -1,3 +1,67 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  .contact {
+    .email-req {
+      max-width: 1200px; // End-Breakpoint InshaaAllah
+      h1 {
+        font-size: var.$size1-max1799;
+      }
+      form {
+        font-size: var.$sizeP-max1799;
+        input {
+          font-size: var.$size3-max1799;
+        }
+        button {
+          font-size: var.$size6-max1799;
+          padding: 0.81em 1.62em;
+          border-radius: 0.5em;
+          cursor: pointer;
+        }
+      }
+    }
+    .footer {
+      width: 90%;
+      max-width: 1619.09px; // End-Breakpoint InshaaAllah
+      font-size: var.$sizeP-max1799;
+      .footer__person {
+        .footer__person__text-info {
+          width: 70%;
+          h2 {
+            font-size: var.$sizeP-max1799;
+          }
+          h3 {
+            font-size: var.$size3-max1799;
+          }
+        }
+        img {
+          width: 25%;
+        }
+      }
+      .footer__nav,
+      .footer__services,
+      .footer__contact {
+        h2 {
+          font-size: var.$size3-max1799;
+        }
+        ul {
+          li {
+            font-size: var.$size6-max1799;
+            cursor: pointer;
+          }
+        }
+      }
+      &::after {
+        width: 5vw;
+      }
+    }
+    .copyright {
+      font-size: var.$sizeP-max1799;
+      h2 {
+        font-size: var.$size3-max1799;
+      }
+    }
+  }
+}

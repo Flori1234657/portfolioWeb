@@ -50,8 +50,11 @@ const Cards = () => {
         >
           <h3>Web Udate or Error Fixing Service</h3>
           <p>
-            Do you want a new update on your web?Or do you have something going
-            wrong on your code?Contact us.
+            Do you want a new update on your web?
+            {window.innerWidth < 1200
+              ? `Or do you have something going
+            wrong on your code?Contact us.`
+              : `Or is your code working not how you want work?`}
           </p>
           <button>Learn More</button>
         </div>

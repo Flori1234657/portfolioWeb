@@ -1,3 +1,36 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  .my-skills {
+    h1 {
+      font-size: var.$size4-max1799;
+      margin: 0.8em 0;
+      padding: 0;
+    }
+    .my-skills__skills-cont {
+      max-width: 600px; // End-Breakpoint InshaaAllah
+      font-size: var.$sizeP-max1799;
+      border-radius: 0.34em;
+      h3 {
+        font-size: var.$size3-max1799;
+      }
+      img {
+        font-size: var.$sizeP-max1799;
+      }
+      .my-skills__skills-cont__names-gr {
+        h3 {
+          font-size: var.$size3-max1799;
+        }
+      }
+    }
+    button {
+      font-size: var.$size3-max1799;
+      border-radius: 0.42em;
+      padding: 0.84em 1.68em;
+      margin: 3em;
+      cursor: pointer;
+    }
+  }
+}

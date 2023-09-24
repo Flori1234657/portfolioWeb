@@ -1,3 +1,36 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  header {
+    .pcNavigation {
+      width: 90%;
+      max-width: 1800px; // End-Breakpoint InshaaAllah
+      img {
+        width: 9%;
+        cursor: pointer;
+      }
+      ul {
+        max-width: 728px;
+        li {
+          font-size: var.$size6-max1799;
+          padding: 0;
+          cursor: pointer;
+        }
+      }
+      div {
+        width: auto;
+        button {
+          font-size: var.$size6-max1799;
+          padding: 0.81em 1.62em;
+          margin: 0.81em 0;
+          border-radius: 0.5em;
+        }
+        button:first-child {
+          margin-right: 1.62em;
+        }
+      }
+    }
+  }
+}

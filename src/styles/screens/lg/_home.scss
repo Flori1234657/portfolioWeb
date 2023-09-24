@@ -1,3 +1,41 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  main {
+    font-size: var.$size6-max1799;
+    .home {
+      width: 90%;
+      max-width: 1800px; // End-Breakpoint InshaaAllah
+      grid-template-columns: repeat(2, 50%);
+      .home__text-group {
+        width: 85%;
+        max-width: 550px;
+        h1 {
+          font-size: var.$size2-max1799;
+          margin-top: 4em;
+        }
+        p {
+          font-size: var.$size3-max1799;
+        }
+        button {
+          font-size: var.$size3-max1799;
+          padding: 0.84em 1.68em;
+          border-radius: 0.4em;
+          margin-bottom: 8.4em;
+        }
+      }
+      img {
+        font-size: var.$size6-max1799;
+      }
+      h3 {
+        font-size: var.$size3-max1799;
+        margin-bottom: 8.4em;
+        svg {
+          font-size: var.$sizeP-max1799;
+        }
+      }
+    }
+  }
+}

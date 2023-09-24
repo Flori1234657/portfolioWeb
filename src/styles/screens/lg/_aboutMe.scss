@@ -1,3 +1,37 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  .about-us {
+    max-width: 1529.14px; // End-Breakpoint InshaaAllah
+    h1 {
+      font-size: var.$size4-max1799;
+      margin: 0.8em 0;
+      padding: 0;
+    }
+    .about-us__card {
+      width: 75%;
+      max-width: 900px;
+      font-size: var.$sizeP-max1799;
+      border-radius: 0.34em;
+      padding: 1em 0;
+      margin-bottom: 5em;
+      p {
+        font-size: var.$size6-max1799;
+      }
+      .about-us__card__left-cont {
+        border-right: 0.04em solid var.$col1;
+        .about-us__card__left-cont__img-perkohshem {
+          font-size: var.$sizeP-max1799;
+          border-width: 0.34em;
+        }
+        button {
+          font-size: var.$size6-max1799;
+          padding: 0.81em 1.62em;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

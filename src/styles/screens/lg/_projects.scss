@@ -1,3 +1,40 @@
 @use "../../base/mixin" as mix;
 @use "../../base/variables" as var;
 @use "../../components/button" as btn;
+
+@mixin styles {
+  .projects {
+    font-size: var.$sizeP-max1799;
+    h1 {
+      font-size: var.$size4-max1799;
+      margin: 0.8em 0;
+      padding: 0;
+    }
+    .projects__container {
+      max-width: 850px; // End-Breakpoint InshaaAllah
+      width: 60%;
+      font-size: var.$sizeP-max1799;
+      border-radius: 0.34em;
+      img {
+        font-size: var.$sizeP-max1799;
+        border-radius: 0.34em;
+      }
+      .projects__container__txt-and-btn-info-cont {
+        font-size: var.$sizeP-max1799;
+        h3 {
+          font-size: var.$size5-max1799;
+        }
+        p {
+          font-size: var.$size6-max1799;
+        }
+        .projects__container__txt-and-btn-info-cont__btns-cont {
+          button {
+            font-size: var.$size6-max1799;
+            padding: 0.81em 1.62em;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

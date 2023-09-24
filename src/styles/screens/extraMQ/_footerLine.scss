@@ -1,0 +1,12 @@
+@media screen and (min-width: 1800px) {
+  .contact {
+    .footer {
+      &::after {
+        width: clamp(5.63rem, -50.14rem + 49.57vw, 27.31rem); // 90-437
+      }
+      &::before {
+        width: clamp(9rem, -39.37rem + 43vw, 27.81rem); //144-445
+      }
+    }
+  }
+}
