@@ -51,5 +51,32 @@
         margin-left: 0;
       }
     }
+    dialog {
+      width: 50%;
+      flex-direction: row;
+      font-size: var.$sizeP-max1199;
+      border-radius: 0.4em;
+      img {
+        width: 70%;
+        font-size: var.$sizeP-max1199;
+        border-radius: 0.4em;
+        margin: 1em;
+      }
+      svg:nth-child(3) {
+        font-size: var.$sizeP-max1199;
+        width: 1.8em;
+        height: 1.8em;
+        cursor: pointer;
+      }
+      svg:nth-child(2) {
+        font-size: var.$sizeP-max1199;
+        width: 1.8em;
+        height: 1.8em;
+        margin: 0.8em;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+      }
+    }
   }
 }

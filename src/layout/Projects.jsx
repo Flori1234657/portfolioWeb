@@ -1,9 +1,14 @@
-import { useState } from "react";
-import PlaceholderImg from "../assets/images/projectsPlaceholderImg.png";
+import { useRef, useState } from "react";
+import ImgKsPh from "../assets/images/ksPh.png";
 import ImgCarousel from "../components/sections/projects/ImgCarousel";
+import ImgDashboardPh from "../assets/images/dbPh.png";
+import ImgFinancdPh from "../assets/images/fcPh.png";
+import ImgKsPC from "../assets/images/3proj/kHpc.png";
+import ImgDbPc from "../assets/images/3proj/dbPc.png";
+import ImgFcPc from "../assets/images/3proj/fncPc.png";
 
 const Projects = () => {
-  const [imagesCarousel, setImagesCarousel] = useState(false);
+  const imageModal = useRef(null);
 
   return (
     <section className="projects" aria-label="Project's group" data-observer>
@@ -12,7 +17,10 @@ const Projects = () => {
         className="projects__container"
         aria-label="Project's info container"
       >
-        <img src={PlaceholderImg} alt="Project image" />
+        <img
+          src={window.innerWidth < 900 ? ImgKsPh : ImgKsPC}
+          alt="Project image"
+        />
         <div
           className="projects__container__txt-and-btn-info-cont"
           aria-label="Group for text info and button's"
@@ -27,7 +35,14 @@ const Projects = () => {
             className="projects__container__txt-and-btn-info-cont__btns-cont"
             aria-label="Group for button's"
           >
-            <button onClick={() => setImagesCarousel(true)}>Images</button>
+            <button
+              onClick={() => {
+                imageModal.current.showModal();
+                imageModal.current.style = "display:flex";
+              }}
+            >
+              Images
+            </button>
             <button>Go Live</button>
           </div>
         </div>
@@ -36,7 +51,10 @@ const Projects = () => {
         className="projects__container"
         aria-label="Project's info container"
       >
-        <img src={PlaceholderImg} alt="Project image" />
+        <img
+          src={window.innerWidth < 900 ? ImgDashboardPh : ImgDbPc}
+          alt="Project image"
+        />
         <div
           className="projects__container__txt-and-btn-info-cont"
           aria-label="Group for text info and button's"
@@ -51,7 +69,14 @@ const Projects = () => {
             className="projects__container__txt-and-btn-info-cont__btns-cont"
             aria-label="Group for button's"
           >
-            <button onClick={() => setImagesCarousel(true)}>Images</button>
+            <button
+              onClick={() => {
+                imageModal.current.showModal();
+                imageModal.current.style = "display:flex";
+              }}
+            >
+              Images
+            </button>
             <button>Go Live</button>
           </div>
         </div>
@@ -60,7 +85,10 @@ const Projects = () => {
         className="projects__container"
         aria-label="Project's info container"
       >
-        <img src={PlaceholderImg} alt="Project image" />
+        <img
+          src={window.innerWidth < 900 ? ImgFinancdPh : ImgFcPc}
+          alt="Project image"
+        />
         <div
           className="projects__container__txt-and-btn-info-cont"
           aria-label="Group for text info and button's"
@@ -74,12 +102,19 @@ const Projects = () => {
             className="projects__container__txt-and-btn-info-cont__btns-cont"
             aria-label="Group for button's"
           >
-            <button onClick={() => setImagesCarousel(true)}>Images</button>
+            <button
+              onClick={() => {
+                imageModal.current.style = "display:flex";
+                imageModal.current.showModal();
+              }}
+            >
+              Images
+            </button>
             <button>Go Live</button>
           </div>
         </div>
       </div>
-      {imagesCarousel ? <ImgCarousel /> : ""}
+      <ImgCarousel refHook={imageModal} />
     </section>
   );
 };

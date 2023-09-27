@@ -72,4 +72,37 @@
       }
     }
   }
+  dialog {
+    width: 90%;
+    margin: auto;
+    border: none;
+    font-size: var.$sizeP-max599;
+    border-radius: 0.5em;
+    @include mix.flex(column, flex-start, center);
+    img {
+      width: 80%;
+      aspect-ratio: 1.3333;
+      font-size: var.$sizeP-max599;
+      margin-top: 3em;
+      border-radius: 0.5em;
+    }
+    svg:nth-child(3) {
+      color: var.$col-err4;
+      font-size: var.$sizeP-max599;
+      width: 2em;
+      height: 2em;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0.8em;
+    }
+    svg:nth-child(2) {
+      color: var.$col3;
+      font-size: var.$sizeP-max599;
+      width: 2em;
+      height: 2em;
+      margin: 2em 0;
+    }
+    display: none;
+  }
 }

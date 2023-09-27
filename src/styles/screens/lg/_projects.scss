@@ -36,5 +36,20 @@
         }
       }
     }
+    dialog {
+      max-width: 900px;
+      font-size: var.$sizeP-max1799;
+      border-radius: 0.3em;
+      img {
+        font-size: var.$sizeP-max1799;
+        border-radius: 0.3em;
+      }
+      svg:nth-child(3) {
+        font-size: var.$sizeP-max1799;
+      }
+      svg:nth-child(2) {
+        font-size: var.$sizeP-max1799;
+      }
+    }
   }
 }
