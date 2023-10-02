@@ -1,60 +1,87 @@
 import { useState } from "react";
 import { HiMenuAlt3 as MenuIc } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
+import { RiCloseFill as CloseMenuIc } from "react-icons/ri";
 import Logo from "../assets/logo/logo.png";
+import { motion } from "framer-motion";
+import { vrPhNavCont } from "../framerMotion/variants";
+import { listItemsArr, buttons } from "../components/nav/listItems";
 
 const OptPh = () => {
+  const [togleMenuIc, setTogleMenuIc] = useState(true);
   const [togleNav, setTogleNav] = useState(false);
-  const [obserObj, setObserObj] = useState({
-    ["home"]: true,
-    ["services"]: false,
-    "about-us": false,
-    "my-skills": false,
-    ["projects"]: false,
-    ["contact"]: false,
-  });
-
-  // InshaaAllah ktu posht do bejm animation e linkve
-
-  const observerRef = document.querySelectorAll("[data-observer]");
-  const observer = new IntersectionObserver((els) => {
-    els.forEach((el) => {
-      if (el.isIntersecting)
-        setObserObj({ ...obserObj, [el.target.className]: true });
-      else setObserObj({ ...obserObj, [el.target.className]: false });
-    });
-  });
-  observerRef.forEach((el) => observer.observe(el));
-
-  //Nese te jep probleme nuk i tregon linket sic duhet mund te duhet te perdoresh useRef
-  //shiko vidjon e webDevSimplified.
 
   return (
     <nav className="phoneNavigation">
-      <img src={Logo} alt="Logo" />
-      <button>
-        <MenuIc onClick={() => setTogleNav(!togleNav)} />
-      </button>
+      <motion.img
+        initial={{ x: "50vw" }}
+        animate={{ x: "0vw" }}
+        transition={{ type: "spring", stiffness: 300 }}
+        src={Logo}
+        alt="Logo"
+        loading="lazy"
+      />
+      <motion.button
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        whileTap={{ scale: 1.1 }}
+        onClick={() => setTogleMenuIc(!togleMenuIc)}
+      >
+        {togleMenuIc ? (
+          <MenuIc onClick={() => setTogleNav(!togleNav)} />
+        ) : (
+          <CloseMenuIc onClick={() => setTogleNav(!togleNav)} />
+        )}
+      </motion.button>
 
-      <div
+      <motion.div
         className="phoneNavigation__hiddenCont"
         aria-label="Hidden navigation and CTA btn's group"
-        style={togleNav ? { display: "flex" } : { opacity: "none" }}
+        style={togleNav ? { display: "flex" } : { display: "none" }}
+        variants={vrPhNavCont}
+        initial="init"
+        animate={togleNav ? "anim" : ""}
       >
         <ul>
-          <li className={obserObj.home ? "active-link" : ""}>Home</li>
-          <li className={obserObj.services ? "active-link" : ""}>Services</li>
-          <li className={obserObj["about-us"] ? "active-link" : ""}>
-            About us
-          </li>
-          <li className={obserObj["my-skills"] ? "active-link" : ""}>Skills</li>
-          <li className={obserObj.projects ? "active-link" : ""}>Projects</li>
-          <li className={obserObj.contact ? "active-link" : ""}>Contact</li>
+          {listItemsArr.map((el) => {
+            return (
+              <motion.li
+                key={el.liHref}
+                initial={{ y: el.yVh }}
+                animate={
+                  togleNav
+                    ? {
+                        y: 0,
+                      }
+                    : ""
+                }
+                transition={{ type: "spring", stiffness: 50 }}
+              >
+                <a href={el.liHref}>{el.liName}</a>
+              </motion.li>
+            );
+          })}
         </ul>
         <div aria-label="CTA buton's group">
-          <button>Get My Cv</button>
-          <button>Hire Me</button>
+          {buttons.map((el) => (
+            <motion.button
+              key={el.id}
+              initial={{ y: el.yVh, rotate: "-90deg" }}
+              animate={
+                togleNav
+                  ? {
+                      y: 0,
+                      rotate: "0deg",
+                    }
+                  : ""
+              }
+              transition={{ type: "spring", stiffness: 50 }}
+            >
+              {el.txt}
+            </motion.button>
+          ))}
         </div>
-      </div>
+      </motion.div>
     </nav>
   );
 };

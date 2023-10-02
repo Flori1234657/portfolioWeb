@@ -11,7 +11,12 @@ import MuiIcn from "../assets/icons/material-ui.png";
 
 const MySkills = () => {
   return (
-    <section className="my-skills" aria-label="My skills section" data-observer>
+    <section
+      className="my-skills"
+      id="ms"
+      aria-label="My skills section"
+      data-observer
+    >
       <h1>My Skills</h1>
       <div
         className="my-skills__skills-cont --core-tech"

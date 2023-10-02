@@ -1,22 +1,43 @@
 import { HiArrowNarrowDown as ArrIcn } from "react-icons/hi";
+import { motion } from "framer-motion";
+import { vrPhHeroText, vrPhHeroImg } from "../framerMotion/variants";
+import ProfilePlaceholdr from "../assets/profile/placeholder.jpg";
 
 const Home = () => {
+  const h1variant = vrPhHeroText();
+  const pvariant = vrPhHeroText("15vh");
+  const btnvariant = vrPhHeroText("20vh");
+
   return (
-    <section className="home" aria-label="Home section container" data-observer>
+    <section
+      className="home"
+      id="hm"
+      aria-label="Home section container"
+      data-observer
+    >
       <section
         className="home__text-group"
         aria-label="Home section text and btn group"
       >
-        <h1>
+        <motion.h1 variants={h1variant} initial="init" animate="anim">
           Hey, I'm <span>Florian Dollani</span>,<br /> a freelance web developer
-        </h1>
-        <p>
+        </motion.h1>
+        <motion.p variants={pvariant} initial="init" animate="anim">
           Do you want a web for your business?Or do you want a web for youself?
           I think you are on the right place!
-        </p>
-        <button>Hire Me</button>
+        </motion.p>
+        <motion.button variants={btnvariant} initial="init" animate="anim">
+          Hire Me
+        </motion.button>
       </section>
-      <img src="" alt="Photo of the person" />
+      <motion.img
+        variants={vrPhHeroImg}
+        initial="init"
+        animate="anim"
+        src={ProfilePlaceholdr}
+        alt="Photo of the person"
+        loading="lazy"
+      />
       <h3>
         Scroll Down <ArrIcn />
       </h3>

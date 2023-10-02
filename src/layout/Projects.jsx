@@ -9,9 +9,21 @@ import ImgFcPc from "../assets/images/3proj/fncPc.png";
 
 const Projects = () => {
   const imageModal = useRef(null);
+  const [imgType, setImgType] = useState("");
+
+  const handleImgBtnClick = (imgL) => {
+    setImgType(imgL);
+    imageModal.current.showModal();
+    imageModal.current.style = "display:flex";
+  };
 
   return (
-    <section className="projects" aria-label="Project's group" data-observer>
+    <section
+      className="projects"
+      aria-label="Project's group"
+      id="pr"
+      data-observer
+    >
       <h1>Project's</h1>
       <div
         className="projects__container"
@@ -35,14 +47,7 @@ const Projects = () => {
             className="projects__container__txt-and-btn-info-cont__btns-cont"
             aria-label="Group for button's"
           >
-            <button
-              onClick={() => {
-                imageModal.current.showModal();
-                imageModal.current.style = "display:flex";
-              }}
-            >
-              Images
-            </button>
+            <button onClick={() => handleImgBtnClick("ks")}>Images</button>
             <button>Go Live</button>
           </div>
         </div>
@@ -69,14 +74,7 @@ const Projects = () => {
             className="projects__container__txt-and-btn-info-cont__btns-cont"
             aria-label="Group for button's"
           >
-            <button
-              onClick={() => {
-                imageModal.current.showModal();
-                imageModal.current.style = "display:flex";
-              }}
-            >
-              Images
-            </button>
+            <button onClick={() => handleImgBtnClick("db")}>Images</button>
             <button>Go Live</button>
           </div>
         </div>
@@ -102,19 +100,12 @@ const Projects = () => {
             className="projects__container__txt-and-btn-info-cont__btns-cont"
             aria-label="Group for button's"
           >
-            <button
-              onClick={() => {
-                imageModal.current.style = "display:flex";
-                imageModal.current.showModal();
-              }}
-            >
-              Images
-            </button>
+            <button onClick={() => handleImgBtnClick("fc")}>Images</button>
             <button>Go Live</button>
           </div>
         </div>
       </div>
-      <ImgCarousel refHook={imageModal} />
+      <ImgCarousel refHook={imageModal} imgT={imgType} />
     </section>
   );
 };

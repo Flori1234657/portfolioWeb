@@ -117,6 +117,7 @@ footer {
             0
           );
           &:hover {
+            transition: 0.4s;
             text-decoration: underline;
             color: var.$col1;
           }

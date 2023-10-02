@@ -8,7 +8,7 @@ import { MdEmail as EmailIcn } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <footer className="contact" data-observer>
+    <footer className="contact" id="ft" data-observer>
       <section
         className="email-req"
         aria-label="Email request for work section"

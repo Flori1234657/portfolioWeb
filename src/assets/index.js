@@ -1,0 +1,9 @@
+export { default as DbI1 } from "./images/slider/dbImg1.png";
+export { default as DbI2 } from "./images/slider/dbImg2.png";
+export { default as DbI3 } from "./images/slider/dbImg3.png";
+export { default as FcI1 } from "./images/slider/fcImg1.png";
+export { default as FcI2 } from "./images/slider/fcImg2.png";
+export { default as FcI3 } from "./images/slider/fcImg3.png";
+export { default as KsI1 } from "./images/slider/ksImg1.png";
+export { default as KsI2 } from "./images/slider/ksImg2.png";
+export { default as KsI3 } from "./images/slider/ksImg3.png";

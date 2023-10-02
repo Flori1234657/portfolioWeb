@@ -1,11 +1,22 @@
 import { MdNearbyError as ThirdIcn } from "react-icons/md";
 import { HiSquare3Stack3D as SecondIcn } from "react-icons/hi2";
 import { HiCode as FirstIcn } from "react-icons/hi";
+import { motion } from "framer-motion";
+import { vrPhCards } from "../../../framerMotion/variants";
 
 const Cards = () => {
+  const vrPhCardmin = vrPhCards("-90deg");
+  const vrPhCardplu = vrPhCards();
+
   return (
     <>
-      <div className="services__cardCont__card" aria-label="Card container 1">
+      <motion.div
+        variants={vrPhCardmin}
+        initial="init"
+        whileInView="anim"
+        className="services__cardCont__card"
+        aria-label="Card container 1"
+      >
         <button>
           {" "}
           <FirstIcn />
@@ -21,8 +32,14 @@ const Cards = () => {
           </p>
           <button>Learn More</button>
         </div>
-      </div>
-      <div className="services__cardCont__card" aria-label="Card container 2">
+      </motion.div>
+      <motion.div
+        variants={vrPhCardplu}
+        initial="init"
+        whileInView="anim"
+        className="services__cardCont__card"
+        aria-label="Card container 2"
+      >
         <button>
           {" "}
           <SecondIcn />
@@ -38,8 +55,14 @@ const Cards = () => {
           </p>
           <button>Learn More</button>
         </div>
-      </div>
-      <div className="services__cardCont__card" aria-label="Card container 3">
+      </motion.div>
+      <motion.div
+        variants={vrPhCardmin}
+        initial="init"
+        whileInView="anim"
+        className="services__cardCont__card"
+        aria-label="Card container 3"
+      >
         <button>
           {" "}
           <ThirdIcn />
@@ -58,7 +81,7 @@ const Cards = () => {
           </p>
           <button>Learn More</button>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

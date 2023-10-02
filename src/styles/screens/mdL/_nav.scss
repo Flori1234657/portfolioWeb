@@ -28,6 +28,10 @@
             1.85em 0,
             0
           );
+          &:hover {
+            transition: 0.4s;
+            color: var.$col1;
+          }
         }
       }
       div {
