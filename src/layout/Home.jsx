@@ -19,21 +19,21 @@ const Home = () => {
         className="home__text-group"
         aria-label="Home section text and btn group"
       >
-        <motion.h1 variants={h1variant} initial="init" animate="anim">
+        <motion.h1 variants={h1variant} initial="init" whileInView="anim">
           Hey, I'm <span>Florian Dollani</span>,<br /> a freelance web developer
         </motion.h1>
-        <motion.p variants={pvariant} initial="init" animate="anim">
+        <motion.p variants={pvariant} initial="init" whileInView="anim">
           Do you want a web for your business?Or do you want a web for youself?
           I think you are on the right place!
         </motion.p>
-        <motion.button variants={btnvariant} initial="init" animate="anim">
+        <motion.button variants={btnvariant} initial="init" whileInView="anim">
           Hire Me
         </motion.button>
       </section>
       <motion.img
         variants={vrPhHeroImg}
         initial="init"
-        animate="anim"
+        whileInView="anim"
         src={ProfilePlaceholdr}
         alt="Photo of the person"
         loading="lazy"

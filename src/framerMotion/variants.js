@@ -58,3 +58,25 @@ export const vrAboutCard = {
     },
   },
 };
+
+export const vrMySkillsLabel = {
+  init: {
+    transform: "translate(30%, 200%)",
+    opacity: 0,
+  },
+  anim: {
+    transform: "translate(30%, -52%)",
+    opacity: 1,
+    transition: { type: "spring", mass: 0.5 },
+  },
+};
+
+export const vrProjectCtaBtn = (levizja = "10vw") => ({
+  init: { x: levizja },
+  anim: {
+    x: 0,
+    transition: {
+      delay: 0.2,
+    },
+  },
+});

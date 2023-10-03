@@ -4,7 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { RiCloseFill as CloseMenuIc } from "react-icons/ri";
 import Logo from "../assets/logo/logo.png";
 import { motion } from "framer-motion";
-import { vrPhNavCont } from "../framerMotion/variants";
+import * as vr from "../framerMotion/variants";
 import { listItemsArr, buttons } from "../components/nav/listItems";
 
 const OptPh = () => {
@@ -38,7 +38,7 @@ const OptPh = () => {
         className="phoneNavigation__hiddenCont"
         aria-label="Hidden navigation and CTA btn's group"
         style={togleNav ? { display: "flex" } : { display: "none" }}
-        variants={vrPhNavCont}
+        variants={vr.vrPhNavCont}
         initial="init"
         animate={togleNav ? "anim" : ""}
       >

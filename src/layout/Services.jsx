@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "../components/sections/servicesSec/Cards";
 import { motion } from "framer-motion";
-import { vrPhHeroImg, vrPhHeroText } from "../framerMotion/variants";
+import { vrPhHeroText } from "../framerMotion/variants";
 
 const Services = () => {
   const vrTextHead = vrPhHeroText();
@@ -13,12 +13,7 @@ const Services = () => {
       aria-label="Services section"
       data-observer
     >
-      <motion.h1
-        variants={vrPhHeroImg}
-        initial="init"
-        whileInView="anim"
-        transition={{ delay: 0 }}
-      >
+      <motion.h1 variants={vrTextHead} initial="init" whileInView="anim">
         Services
       </motion.h1>
       <section

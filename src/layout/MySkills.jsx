@@ -1,15 +1,22 @@
-import HtmlIcn from "../assets/icons/html.png";
-import CssIcn from "../assets/icons/css.png";
-import JavascriptIcn from "../assets/icons/javascript.png";
-import TsIcn from "../assets/icons/type-script.png";
-import SassIcn from "../assets/icons/sass.png";
-import ReactIcn from "../assets/icons/react-js.png";
-import FirebaseIcn from "../assets/icons/firebase.png";
-import GitHubIcn from "../assets/icons/github.png";
-import FigmaIcn from "../assets/icons/figma.png";
-import MuiIcn from "../assets/icons/material-ui.png";
+import {
+  HtmlIcn,
+  CssIcn,
+  JavascriptIcn,
+  TsIcn,
+  SassIcn,
+  ReactIcn,
+  FirebaseIcn,
+  GitHubIcn,
+  FigmaIcn,
+  MuiIcn,
+} from "../assets";
+import { motion } from "framer-motion";
+import { vrPhHeroText, vrMySkillsLabel } from "../framerMotion/variants";
+import IconImg from "../components/sections/mySkills/IconImg";
 
 const MySkills = () => {
+  const vrTextHead = vrPhHeroText();
+
   return (
     <section
       className="my-skills"
@@ -17,15 +24,24 @@ const MySkills = () => {
       aria-label="My skills section"
       data-observer
     >
-      <h1>My Skills</h1>
+      <motion.h1 variants={vrTextHead} initial="init" whileInView="anim">
+        My Skills
+      </motion.h1>
       <div
         className="my-skills__skills-cont --core-tech"
         aria-label="Core tech skill's icon's container"
       >
-        <h3>Core Tech</h3>
-        <img src={HtmlIcn} alt="Html" />
-        <img src={CssIcn} alt="Css" />
-        <img src={JavascriptIcn} alt="Javascrip" />
+        <motion.h3 variants={vrMySkillsLabel} initial="init" whileInView="anim">
+          Core Tech
+        </motion.h3>
+        {[
+          { src: HtmlIcn, alt: "Html" },
+          { src: CssIcn, alt: "Css" },
+          { src: JavascriptIcn, alt: "Javascript" },
+        ].map((el) => (
+          <IconImg key={el.alt} src={el.src} alt={el.alt} />
+        ))}
+
         {window.innerWidth > 900 ? (
           <div
             className="my-skills__skills-cont__names-gr"
@@ -43,10 +59,16 @@ const MySkills = () => {
         className="my-skills__skills-cont --library"
         aria-label="Library skill's icon's container"
       >
-        <h3>Library</h3>
-        <img src={FirebaseIcn} alt="Firebase" />
-        <img src={ReactIcn} alt="React" />
-        <img src={MuiIcn} alt="Material UI" />
+        <motion.h3 variants={vrMySkillsLabel} initial="init" whileInView="anim">
+          Library
+        </motion.h3>
+        {[
+          { src: FirebaseIcn, alt: "Firebase" },
+          { src: ReactIcn, alt: "React" },
+          { src: MuiIcn, alt: "Material UI" },
+        ].map((el) => (
+          <IconImg key={el.alt} src={el.src} alt={el.alt} />
+        ))}
         {window.innerWidth > 900 ? (
           <div
             className="my-skills__skills-cont__names-gr"
@@ -64,11 +86,17 @@ const MySkills = () => {
         className="my-skills__skills-cont --others"
         aria-label="Other skill's icon's container"
       >
-        <h3>Other's</h3>
-        <img src={SassIcn} alt="Sass" />
-        <img src={TsIcn} alt="Typescript" />
-        <img src={GitHubIcn} alt="Github" />
-        <img src={FigmaIcn} alt="Figma" />
+        <motion.h3 variants={vrMySkillsLabel} initial="init" whileInView="anim">
+          Other's
+        </motion.h3>
+        {[
+          { src: SassIcn, alt: "Sass" },
+          { src: TsIcn, alt: "Typescript" },
+          { src: GitHubIcn, alt: "Github" },
+          { src: FigmaIcn, alt: "Figma" },
+        ].map((el) => (
+          <IconImg key={el.alt} src={el.src} alt={el.alt} />
+        ))}
         {window.innerWidth > 900 ? (
           <div
             className="my-skills__skills-cont__names-gr"
@@ -83,7 +111,9 @@ const MySkills = () => {
           ""
         )}
       </div>
-      <button>Interested?</button>
+      <motion.button variants={vrTextHead} initial="init" whileInView="anim">
+        Interested?
+      </motion.button>
     </section>
   );
 };

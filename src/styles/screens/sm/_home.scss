@@ -64,6 +64,16 @@ main {
       svg {
         font-size: var.$sizeP-max599;
         transform: translateY(20%);
+        animation: moveUpDown 0.7s infinite alternate;
+      }
+
+      @keyframes moveUpDown {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(20%);
+        }
       }
     }
   }
