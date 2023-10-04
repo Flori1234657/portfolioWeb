@@ -29,7 +29,12 @@ const Services = () => {
         <motion.h2 variants={vrTextHead} initial="init" whileInView="anim">
           If you don't see what you are looking for here, contact us.
         </motion.h2>
-        <motion.button variants={vrTextHead} initial="init" whileInView="anim">
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          variants={vrTextHead}
+          initial="init"
+          whileInView="anim"
+        >
           Let's Talk
         </motion.button>
       </div>

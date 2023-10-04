@@ -5,6 +5,7 @@ import {
   vrPhCards,
   vrProjectCtaBtn,
 } from "../../../framerMotion/variants";
+import { useWindowWidth } from "../../../hooks/useWindowWidth";
 
 const Cards = ({
   imgPh,
@@ -20,6 +21,9 @@ const Cards = ({
   const vrPhCardplu = vrPhCards();
   const vrCtaBtnR = vrProjectCtaBtn("-10vw");
   const vrCtaBtnL = vrProjectCtaBtn();
+
+  const windowWidth = useWindowWidth();
+
   return (
     <motion.div
       variants={animType === "pl" ? vrPhCardplu : vrPhCardmin}
@@ -30,7 +34,7 @@ const Cards = ({
     >
       <img
         loading="lazy"
-        src={window.innerWidth < 900 ? imgPh : imgPc}
+        src={windowWidth < 900 ? imgPh : imgPc}
         alt="Project image"
       />
       <div
@@ -52,10 +56,16 @@ const Cards = ({
             initial="init"
             whileInView="anim"
             onClick={() => handleImgBtnClick(imgVer)}
+            whileTap={{ scale: 0.9 }}
           >
             Images
           </motion.button>
-          <motion.button variants={vrCtaBtnR} initial="init" whileInView="anim">
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            variants={vrCtaBtnR}
+            initial="init"
+            whileInView="anim"
+          >
             Request
           </motion.button>
         </div>

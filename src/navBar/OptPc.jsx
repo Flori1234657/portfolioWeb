@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "../assets/logo/logo.png";
+import { motion } from "framer-motion";
 
 const OptPc = () => {
   return (
@@ -31,8 +32,8 @@ const OptPc = () => {
         </li>
       </ul>
       <div aria-label="CTA buton's group">
-        <button>Get My Cv</button>
-        <button>Hire Me</button>
+        <motion.button whileTap={{ scale: 0.9 }}>Get My Cv</motion.button>
+        <motion.button whileTap={{ scale: 0.9 }}>Hire Me</motion.button>
       </div>
     </nav>
   );

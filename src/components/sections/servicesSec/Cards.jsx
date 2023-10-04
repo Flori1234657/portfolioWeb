@@ -3,10 +3,12 @@ import { HiSquare3Stack3D as SecondIcn } from "react-icons/hi2";
 import { HiCode as FirstIcn } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { vrPhCards } from "../../../framerMotion/variants";
+import { useWindowWidth } from "../../../hooks/useWindowWidth";
 
 const Cards = () => {
   const vrPhCardmin = vrPhCards("-90deg");
   const vrPhCardplu = vrPhCards();
+  const windowWidth = useWindowWidth();
 
   return (
     <>
@@ -17,7 +19,7 @@ const Cards = () => {
         className="services__cardCont__card"
         aria-label="Card container 1"
       >
-        <button>
+        <button aria-label="Icon button no action perform">
           {" "}
           <FirstIcn />
         </button>
@@ -30,7 +32,7 @@ const Cards = () => {
             Transform design into a real website.Also if you don’t have a pre
             made design we can made it.
           </p>
-          <button>Learn More</button>
+          <motion.button whileTap={{ scale: 0.9 }}>Learn More</motion.button>
         </div>
       </motion.div>
       <motion.div
@@ -40,7 +42,7 @@ const Cards = () => {
         className="services__cardCont__card"
         aria-label="Card container 2"
       >
-        <button>
+        <button aria-label="Icon button no action perform">
           {" "}
           <SecondIcn />
         </button>
@@ -53,7 +55,7 @@ const Cards = () => {
             Do you want a powerful website?This service has both front-end and
             back-end with Firebase.
           </p>
-          <button>Learn More</button>
+          <motion.button whileTap={{ scale: 0.9 }}>Learn More</motion.button>
         </div>
       </motion.div>
       <motion.div
@@ -63,7 +65,7 @@ const Cards = () => {
         className="services__cardCont__card"
         aria-label="Card container 3"
       >
-        <button>
+        <button aria-label="Icon button no action perform">
           {" "}
           <ThirdIcn />
         </button>
@@ -74,12 +76,12 @@ const Cards = () => {
           <h3>Web Udate or Error Fixing Service</h3>
           <p>
             Do you want a new update on your web?
-            {window.innerWidth < 1200
+            {windowWidth < 1200
               ? `Or do you have something going
             wrong on your code?Contact us.`
               : `Or is your code working not how you want work?`}
           </p>
-          <button>Learn More</button>
+          <motion.button whileTap={{ scale: 0.9 }}>Learn More</motion.button>
         </div>
       </motion.div>
     </>

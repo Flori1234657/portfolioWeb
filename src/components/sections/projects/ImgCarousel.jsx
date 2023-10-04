@@ -1,21 +1,34 @@
 import { useEffect, useState } from "react";
 import { BsFillArrowRightCircleFill as ImgChangeIcn } from "react-icons/bs";
 import { AiFillCloseCircle as CloseIcn } from "react-icons/ai";
-import * as Sl from "../../../assets";
+import { motion } from "framer-motion";
+import { vrPhCards } from "../../../framerMotion/variants";
+import {
+  KsI1,
+  KsI2,
+  KsI3,
+  DbI1,
+  DbI2,
+  DbI3,
+  FcI1,
+  FcI2,
+  FcI3,
+} from "../../../assets";
 
 const ImgCarousel = ({ refHook, imgT }) => {
   const [imgsArr, setImgsArr] = useState([]);
+  const phoneCards = vrPhCards();
 
   useEffect(() => {
     switch (imgT) {
       case "ks":
-        setImgsArr([Sl.KsI1, Sl.KsI2, Sl.KsI3]);
+        setImgsArr([KsI1, KsI2, KsI3]);
         break;
       case "db":
-        setImgsArr([Sl.DbI1, Sl.DbI2, Sl.DbI3]);
+        setImgsArr([DbI1, DbI2, DbI3]);
         break;
       case "fc":
-        setImgsArr([Sl.FcI1, Sl.FcI2, Sl.FcI3]);
+        setImgsArr([FcI1, FcI2, FcI3]);
         break;
       default:
         setImgsArr([]);
@@ -30,13 +43,17 @@ const ImgCarousel = ({ refHook, imgT }) => {
   };
 
   return (
-    <dialog
+    <motion.dialog
+      variants={phoneCards}
+      initial="init"
+      whileInView="anim"
       className="img-carousel-cont"
       aria-label="Image carousel modal"
       ref={refHook}
       onCancel={(e) => e.preventDefault()} // Per mos ta mbyllur me esc InshaaAllah
     >
       <img src={imgsArr[currentIndex]} alt="image's" />
+
       <ImgChangeIcn onClick={nextImage} />
       <CloseIcn
         onClick={() => {
@@ -44,7 +61,7 @@ const ImgCarousel = ({ refHook, imgT }) => {
           refHook.current.style = "display:none";
         }}
       />
-    </dialog>
+    </motion.dialog>
   );
 };
 

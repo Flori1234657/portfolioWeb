@@ -26,7 +26,12 @@ const Home = () => {
           Do you want a web for your business?Or do you want a web for youself?
           I think you are on the right place!
         </motion.p>
-        <motion.button variants={btnvariant} initial="init" whileInView="anim">
+        <motion.button
+          variants={btnvariant}
+          initial="init"
+          whileInView="anim"
+          whileTap={{ scale: 0.9 }}
+        >
           Hire Me
         </motion.button>
       </section>

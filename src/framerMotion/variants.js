@@ -17,6 +17,7 @@ export const vrPhHeroText = (yVh = "10vh") => ({
     y: "0vh",
     opacity: 1,
     transition: {
+      delay: 0.1,
       duration: 0.5,
     },
   },
@@ -40,6 +41,7 @@ export const vrPhCards = (rt = "90deg") => ({
     scale: 1,
     rotate: "0deg",
     transition: {
+      delay: 0.1,
       type: "spring",
       mass: 0.5,
     },
@@ -53,6 +55,7 @@ export const vrAboutCard = {
   anim: {
     y: 0,
     transition: {
+      delay: 0.1,
       type: "spring",
       mass: 0.5,
     },
@@ -67,7 +70,7 @@ export const vrMySkillsLabel = {
   anim: {
     transform: "translate(30%, -52%)",
     opacity: 1,
-    transition: { type: "spring", mass: 0.5 },
+    transition: { type: "spring", mass: 0.5, delay: 0.1 },
   },
 };
 

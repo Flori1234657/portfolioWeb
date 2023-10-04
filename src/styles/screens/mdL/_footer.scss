@@ -29,33 +29,21 @@
         }
       }
     }
+    // Vetëm për të vën borderin lart-pc InshaaAllah
+    .footer-wraper {
+      width: 100%;
+      font-size: var.$sizeP-max1199;
+      border-top: 1px solid white;
+      border-top: 0.05em solid white;
+      display: flex;
+      justify-content: center;
+    }
     .footer {
       width: 85%;
       flex-direction: row;
       font-size: var.$sizeP-max1199;
       padding: 2.1em 0;
-      border-top: 0.05em solid white;
       position: relative;
-      &::after {
-        content: "";
-        width: 8.7%;
-        height: 0.05em;
-        background-color: white;
-        position: absolute;
-        right: 0;
-        top: -0.05em;
-        transform: translateX(100%);
-      }
-      &::before {
-        content: "";
-        width: 8.9%;
-        height: 0.05em;
-        background-color: white;
-        position: absolute;
-        left: 0;
-        top: -0.05em;
-        transform: translateX(-100%);
-      }
       .footer__person {
         width: 29%;
         align-items: flex-start;

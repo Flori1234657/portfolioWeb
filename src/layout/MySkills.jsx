@@ -13,9 +13,11 @@ import {
 import { motion } from "framer-motion";
 import { vrPhHeroText, vrMySkillsLabel } from "../framerMotion/variants";
 import IconImg from "../components/sections/mySkills/IconImg";
+import { useWindowWidth } from "../hooks/useWindowWidth";
 
 const MySkills = () => {
   const vrTextHead = vrPhHeroText();
+  const windowWidth = useWindowWidth();
 
   return (
     <section
@@ -42,14 +44,20 @@ const MySkills = () => {
           <IconImg key={el.alt} src={el.src} alt={el.alt} />
         ))}
 
-        {window.innerWidth > 900 ? (
+        {windowWidth > 900 ? (
           <div
             className="my-skills__skills-cont__names-gr"
             aria-label="Text name group of icon's"
           >
-            <h3>HTML</h3>
-            <h3>CSS</h3>
-            <h3>JAVASCRIPT</h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              HTML
+            </motion.h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              CSS
+            </motion.h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              JAVASCRIPT
+            </motion.h3>
           </div>
         ) : (
           ""
@@ -69,14 +77,20 @@ const MySkills = () => {
         ].map((el) => (
           <IconImg key={el.alt} src={el.src} alt={el.alt} />
         ))}
-        {window.innerWidth > 900 ? (
+        {windowWidth > 900 ? (
           <div
             className="my-skills__skills-cont__names-gr"
             aria-label="Text name group of icon's"
           >
-            <h3>FIREBASE</h3>
-            <h3>REACT</h3>
-            <h3>MATERIAL UI</h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              FIREBASE
+            </motion.h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              REACT
+            </motion.h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              MATERIAL UI
+            </motion.h3>
           </div>
         ) : (
           ""
@@ -97,21 +111,34 @@ const MySkills = () => {
         ].map((el) => (
           <IconImg key={el.alt} src={el.src} alt={el.alt} />
         ))}
-        {window.innerWidth > 900 ? (
+        {windowWidth > 900 ? (
           <div
             className="my-skills__skills-cont__names-gr"
             aria-label="Text name group of icon's"
           >
-            <h3>SASS</h3>
-            <h3>TYPESCRIPT</h3>
-            <h3>GITHUB</h3>
-            <h3>FIGMA</h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              SASS
+            </motion.h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              TYPESCRIPT
+            </motion.h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              GITHUB
+            </motion.h3>
+            <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+              FIGMA
+            </motion.h3>
           </div>
         ) : (
           ""
         )}
       </div>
-      <motion.button variants={vrTextHead} initial="init" whileInView="anim">
+      <motion.button
+        whileTap={{ scale: 0.9 }}
+        variants={vrTextHead}
+        initial="init"
+        whileInView="anim"
+      >
         Interested?
       </motion.button>
     </section>

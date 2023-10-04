@@ -76,6 +76,7 @@ const OptPh = () => {
                   : ""
               }
               transition={{ type: "spring", stiffness: 50 }}
+              whileTap={{ scale: 0.9 }}
             >
               {el.txt}
             </motion.button>
