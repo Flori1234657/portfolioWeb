@@ -28,6 +28,15 @@
             0 0 4.62em 0,
             0.5em
           );
+          overflow: hidden;
+          @include mix.home-screen-btn-anim($br: 0.4em);
+          &::after {
+            bottom: 0;
+            right: 0;
+          }
+          &:hover {
+            box-shadow: var.$col4 0px 7px 29px 0px;
+          }
         }
       }
       img {

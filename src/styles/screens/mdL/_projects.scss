@@ -40,6 +40,16 @@
             padding: 0.85em 1.7em;
             border-radius: 0.5em;
             margin: 0;
+            position: relative;
+            overflow: hidden;
+            @include mix.home-screen-btn-anim();
+            &::after {
+              bottom: 0;
+              right: 0;
+            }
+            &:hover {
+              box-shadow: var.$col4 0px 7px 29px 0px;
+            }
           }
         }
       }

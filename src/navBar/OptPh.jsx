@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { HiMenuAlt3 as MenuIc } from "react-icons/hi";
-import { AiOutlineClose } from "react-icons/ai";
 import { RiCloseFill as CloseMenuIc } from "react-icons/ri";
-import Logo from "../assets/logo/logo.png";
+import Logo from "../assets/logo/logo.webp";
 import { motion } from "framer-motion";
 import * as vr from "../framerMotion/variants";
 import { listItemsArr, buttons } from "../components/nav/listItems";
@@ -19,13 +18,13 @@ const OptPh = () => {
         transition={{ type: "spring", stiffness: 300 }}
         src={Logo}
         alt="Logo"
-        loading="lazy"
       />
       <motion.button
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         whileTap={{ scale: 1.1 }}
         onClick={() => setTogleMenuIc(!togleMenuIc)}
+        aria-label="Button to open navigation menu"
       >
         {togleMenuIc ? (
           <MenuIc onClick={() => setTogleNav(!togleNav)} />
@@ -33,7 +32,6 @@ const OptPh = () => {
           <CloseMenuIc onClick={() => setTogleNav(!togleNav)} />
         )}
       </motion.button>
-
       <motion.div
         className="phoneNavigation__hiddenCont"
         aria-label="Hidden navigation and CTA btn's group"

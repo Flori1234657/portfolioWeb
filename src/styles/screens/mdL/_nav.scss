@@ -38,6 +38,7 @@
         width: 29.5%;
         @include mix.flex-row-between;
         button {
+          position: relative;
           @include btn.buttonPc(
             var.$size6-max1199,
             white,
@@ -48,10 +49,27 @@
           );
           box-shadow: inset 0px 0px 0px 0.08em white;
           -webkit-tap-highlight-color: none;
+          overflow: hidden;
         }
         button:first-child {
           background-color: white;
           color: var.$col4;
+          @include mix.button-bckg-position-chg();
+          &::after {
+            top: 0;
+            right: 0;
+          }
+        }
+        button:last-child {
+          @include mix.button-bckg-position-chg(
+            $w: 0,
+            $aw: 100%,
+            $txtCol: var.$col4
+          );
+          &::after {
+            top: 0;
+            right: 0;
+          }
         }
       }
     }

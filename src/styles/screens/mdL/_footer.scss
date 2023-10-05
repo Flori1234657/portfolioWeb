@@ -26,6 +26,11 @@
           margin: 0;
           padding: 0.84em 1.68em;
           border-radius: 0.61em;
+          position: relative;
+          overflow: hidden;
+          &:hover {
+            box-shadow: white 0px 7px 29px 0px;
+          }
         }
       }
     }

@@ -1,9 +1,9 @@
-import ImgDashboardPh from "../../../assets/images/dbPh.png";
-import ImgFinancdPh from "../../../assets/images/fcPh.png";
-import ImgKsPC from "../../../assets/images/3proj/kHpc.png";
-import ImgDbPc from "../../../assets/images/3proj/dbPc.png";
-import ImgFcPc from "../../../assets/images/3proj/fncPc.png";
-import ImgKsPh from "../../../assets/images/ksPh.png";
+import ImgDashboardPh from "../../../assets/images/dbPh.webp";
+import ImgFinancdPh from "../../../assets/images/fcPh.webp";
+import ImgKsPC from "../../../assets/images/3proj/kHpc.webp";
+import ImgDbPc from "../../../assets/images/3proj/dbPc.webp";
+import ImgFcPc from "../../../assets/images/3proj/fncPc.webp";
+import ImgKsPh from "../../../assets/images/ksPh.webp";
 
 const data = [
   {

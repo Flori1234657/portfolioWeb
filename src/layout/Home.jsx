@@ -1,7 +1,7 @@
 import { HiArrowNarrowDown as ArrIcn } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { vrPhHeroText, vrPhHeroImg } from "../framerMotion/variants";
-import ProfilePlaceholdr from "../assets/profile/placeholder.jpg";
+import ProfilePlaceholdr from "../assets/profile/placeholder.webp";
 
 const Home = () => {
   const h1variant = vrPhHeroText();
@@ -9,12 +9,7 @@ const Home = () => {
   const btnvariant = vrPhHeroText("20vh");
 
   return (
-    <section
-      className="home"
-      id="hm"
-      aria-label="Home section container"
-      data-observer
-    >
+    <section className="home" id="hm" aria-label="Home section container">
       <section
         className="home__text-group"
         aria-label="Home section text and btn group"

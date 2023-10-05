@@ -7,11 +7,15 @@ import data from "../components/sections/projects/cardsData";
 
 const Projects = () => {
   const vrTextHead = vrPhHeroText();
+  const [reqModalCont, setReqModalCont] = useState(false);
 
   const imageModal = useRef(null);
   const [imgType, setImgType] = useState("");
 
   const handleImgBtnClick = (imgL) => {
+    {
+      !reqModalCont ? setReqModalCont(true) : "";
+    }
     setImgType(imgL);
     imageModal.current.showModal();
     imageModal.current.style = "display:flex";
@@ -40,7 +44,11 @@ const Projects = () => {
         />
       ))}
 
-      <ImgCarousel refHook={imageModal} imgT={imgType} />
+      <ImgCarousel
+        refHook={imageModal}
+        imgT={imgType}
+        reqModalCont={reqModalCont}
+      />
     </section>
   );
 };

@@ -1,4 +1,5 @@
 /* Flex */
+@use "./variables" as var;
 
 @mixin flex-row-between($jc: space-between, $al: center) {
   display: flex;
@@ -35,5 +36,62 @@
 @mixin media-query($breakpoint) {
   @media screen and (min-width: $breakpoint) {
     @content;
+  }
+}
+
+/* Button Animations InshaaAllah */
+
+@mixin button-bckg-position-chg(
+  $bckg: white,
+  $w: 100%,
+  $h: 100%,
+  $aw: 0,
+  $ah: 100%,
+  $txtCol: white,
+  $br: 0.61em
+) {
+  &::after {
+    content: "";
+    width: $w;
+    height: $h;
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    z-index: -1;
+    border-radius: $br;
+    background-color: $bckg;
+    transition: 0.5s;
+  }
+  &:hover {
+    color: $txtCol;
+    &::after {
+      width: $aw;
+      height: $ah;
+    }
+    background-color: transparent;
+  }
+}
+
+@mixin home-screen-btn-anim(
+  $bckg: var.$col4,
+  $w: 100%,
+  $h: 0,
+  $aw: 100%,
+  $ah: 100%,
+  $txtCol: white,
+  $br: 0.5em,
+  $secondBckg: var.$col3
+) {
+  @include button-bckg-position-chg($bckg, $w, $h, $aw, $ah, $txtCol, $br);
+  &:hover::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+    border-radius: $br;
+    background-color: $secondBckg;
   }
 }

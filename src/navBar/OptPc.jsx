@@ -1,5 +1,4 @@
-import React from "react";
-import Logo from "../assets/logo/logo.png";
+import Logo from "../assets/logo/logo.webp";
 import { motion } from "framer-motion";
 
 const OptPc = () => {

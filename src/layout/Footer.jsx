@@ -22,6 +22,7 @@ const Footer = () => {
           whileInView={{ scaleX: 1 }}
           transition={{ delay: 0.2 }}
           aria-label="Email request form"
+          onSubmit={(e) => e.preventDefault()}
         >
           <input
             type="email"

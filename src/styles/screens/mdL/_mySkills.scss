@@ -47,6 +47,21 @@
       font-size: var.$size3-max1199;
       padding: 0.81em 1.62em;
       margin: 3.5em;
+      position: relative;
+      overflow: hidden;
+      @include mix.home-screen-btn-anim(
+        $secondBckg: var.$col4,
+        $bckg: var.$col3,
+        $txtCol: white,
+        $br: 0.42em
+      );
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+      &:hover {
+        box-shadow: var.$col3 0px 7px 29px 0px;
+      }
     }
   }
 }

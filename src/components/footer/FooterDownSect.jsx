@@ -1,5 +1,5 @@
 import React from "react";
-import ProfileImg from "../../assets/profile/footerPlaceholder3.jpg";
+import ProfileImg from "../../assets/profile/footerPlaceholder3.webp";
 import {
   BsFillTelephoneFill as PhoneIcn,
   BsFacebook as FbIcn,

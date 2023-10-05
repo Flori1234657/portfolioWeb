@@ -39,6 +39,24 @@
               0 0 1.8em 0,
               0.61em
             );
+            position: relative;
+            overflow: hidden;
+            @include mix.home-screen-btn-anim(
+              $bckg: var.$col2,
+              $txtCol: var.$col4,
+              $br: 0.5em,
+              $h: 100%,
+              $w: 0,
+              $aw: 100%,
+              $secondBckg: white
+            );
+            &::after {
+              top: 0;
+              right: 0;
+            }
+            &:hover {
+              box-shadow: var.$col2 0px 7px 29px 0px;
+            }
           }
         }
       }
@@ -71,6 +89,16 @@
           1.8em 0 4.3em 0,
           0.61em
         );
+        position: relative;
+        overflow: hidden;
+        @include mix.home-screen-btn-anim($br: 0.5em);
+        &::after {
+          top: 0;
+          right: 0;
+        }
+        &:hover {
+          box-shadow: var.$col4 0px 7px 29px 0px;
+        }
       }
     }
   }

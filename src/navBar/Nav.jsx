@@ -1,7 +1,6 @@
-import React from "react";
-import OptPc from "./OptPc";
-import OptPh from "./OptPh";
 import { useWindowWidth } from "../hooks/useWindowWidth";
+import OptPh from "./OptPh";
+import OptPc from "./OptPc";
 
 const Nav = () => {
   const windowWidth = useWindowWidth();

@@ -1,4 +1,3 @@
-import React from "react";
 import Cards from "../components/sections/servicesSec/Cards";
 import { motion } from "framer-motion";
 import { vrPhHeroText } from "../framerMotion/variants";
@@ -7,12 +6,7 @@ const Services = () => {
   const vrTextHead = vrPhHeroText();
 
   return (
-    <section
-      className="services"
-      id="se"
-      aria-label="Services section"
-      data-observer
-    >
+    <section className="services" id="se" aria-label="Services section">
       <motion.h1 variants={vrTextHead} initial="init" whileInView="anim">
         Services
       </motion.h1>
