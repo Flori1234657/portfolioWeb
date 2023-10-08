@@ -1,6 +1,0 @@
-@use "sass:math";
-
-@function calcBtnPadSm($val) {
-  $div: math.div($val, 2.4);
-  @return ($div + 0.5) + px;
-}

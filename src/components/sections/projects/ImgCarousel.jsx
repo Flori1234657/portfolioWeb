@@ -16,7 +16,14 @@ const ImgCarousel = ({ refHook, imgT, reqModalCont }) => {
       ref={refHook}
       onCancel={(e) => e.preventDefault()} // Per mos ta mbyllur me esc InshaaAllah
     >
-      <Suspense fallback={<div aria-label="Loading spinner"></div>}>
+      <Suspense
+        fallback={
+          <div
+            aria-label="Loading spinner"
+            className="img-carousel-cont__loading-spinner"
+          ></div>
+        }
+      >
         {reqModalCont && <ModalContent imgT={imgT} refHook={refHook} />}
       </Suspense>
     </motion.dialog>

@@ -7,6 +7,12 @@ export { default as FcI3 } from "./images/slider/fcImg3.webp";
 export { default as KsI1 } from "./images/slider/ksImg1.webp";
 export { default as KsI2 } from "./images/slider/ksImg2.webp";
 export { default as KsI3 } from "./images/slider/ksImg3.webp";
+export { default as ImgDashboardPh } from "./images/dbPh.webp";
+export { default as ImgFinancdPh } from "./images/fcPh.webp";
+export { default as ImgKsPC } from "./images/3proj/kHpc.webp";
+export { default as ImgDbPc } from "./images/3proj/dbPc.webp";
+export { default as ImgFcPc } from "./images/3proj/fncPc.webp";
+export { default as ImgKsPh } from "./images/ksPh.webp";
 export { default as HtmlIcn } from "./icons/html.webp";
 export { default as CssIcn } from "./icons/css.webp";
 export { default as JavascriptIcn } from "./icons/javascript.webp";
@@ -17,3 +23,10 @@ export { default as FirebaseIcn } from "./icons/firebase.webp";
 export { default as GitHubIcn } from "./icons/github.webp";
 export { default as FigmaIcn } from "./icons/figma.webp";
 export { default as MuiIcn } from "./icons/material-ui.webp";
+
+//Min Imgs for blur bckg InshaaAllah
+export { default as ImgKsPCMin } from "./images/3proj/kHpcMin.webp";
+export { default as ImgDbPcMin } from "./images/3proj/dbPcMin.webp";
+export { default as ImgFcPcMin } from "./images/3proj/fncPcMin.webp";
+export { default as ImgDashboardPhMin } from "./images/dbPhMin.webp";
+export { default as ImgFinancdPhMin } from "./images/fcPhMin.webp";

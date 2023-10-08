@@ -1,9 +1,11 @@
-import ImgDashboardPh from "../../../assets/images/dbPh.webp";
-import ImgFinancdPh from "../../../assets/images/fcPh.webp";
-import ImgKsPC from "../../../assets/images/3proj/kHpc.webp";
-import ImgDbPc from "../../../assets/images/3proj/dbPc.webp";
-import ImgFcPc from "../../../assets/images/3proj/fncPc.webp";
-import ImgKsPh from "../../../assets/images/ksPh.webp";
+import {
+  ImgDashboardPh,
+  ImgFinancdPh,
+  ImgKsPC,
+  ImgDbPc,
+  ImgFcPc,
+  ImgKsPh,
+} from "../../../assets";
 
 const data = [
   {

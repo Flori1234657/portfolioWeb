@@ -30,8 +30,10 @@
     }
     dialog {
       width: 85%;
-      img {
+      .img-carousel-cont__scroll-cont {
         font-size: var.$sizeP-max899;
+      }
+      img {
         border-radius: 0.3em;
       }
       svg:nth-child(3) {

@@ -32,7 +32,9 @@ const Cards = () => {
             Transform design into a real website.Also if you don’t have a pre
             made design we can made it.
           </p>
-          <motion.button whileTap={{ scale: 0.9 }}>Learn More</motion.button>
+          <motion.button whileTap={{ scale: 0.9 }}>
+            <a href="mailto:floriandollani15@gmail.com">Learn More</a>
+          </motion.button>
         </div>
       </motion.div>
       <motion.div
@@ -55,7 +57,9 @@ const Cards = () => {
             Do you want a powerful website?This service has both front-end and
             back-end with Firebase.
           </p>
-          <motion.button whileTap={{ scale: 0.9 }}>Learn More</motion.button>
+          <motion.button whileTap={{ scale: 0.9 }}>
+            <a href="mailto:floriandollani15@gmail.com">Learn More</a>
+          </motion.button>
         </div>
       </motion.div>
       <motion.div
@@ -81,7 +85,9 @@ const Cards = () => {
             wrong on your code?Contact us.`
               : `Or is your code working not how you want work?`}
           </p>
-          <motion.button whileTap={{ scale: 0.9 }}>Learn More</motion.button>
+          <motion.button whileTap={{ scale: 0.9 }}>
+            <a href="mailto:floriandollani15@gmail.com">Learn More</a>
+          </motion.button>
         </div>
       </motion.div>
     </>

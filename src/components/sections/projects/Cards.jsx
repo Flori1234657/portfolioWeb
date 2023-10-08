@@ -66,7 +66,7 @@ const Cards = ({
             initial="init"
             whileInView="anim"
           >
-            Request
+            <a href="mailto:floriandollani15@gmail.com">Request</a>
           </motion.button>
         </div>
       </div>

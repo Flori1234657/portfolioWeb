@@ -15,4 +15,16 @@
   @include mySkills.styles;
   @include projects.styles;
   @include footer.styles;
+
+  #first-loader {
+    width: 5vw;
+    height: 5vw;
+    &::before,
+    &::after {
+      border-width: 0.5vw;
+    }
+    &::after {
+      inset: 0.8vw;
+    }
+  }
 }

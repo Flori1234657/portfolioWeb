@@ -38,22 +38,22 @@ const FooterDownSect = () => {
         </motion.h2>
         <ul>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Home
+            <a href="#hm">Home</a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Services
+            <a href="#se">Services</a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            About us
+            <a href="#ab">About us</a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Skills
+            <a href="#ms">Skills</a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Project's
+            <a href="#pr">Project's</a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Contact
+            <a href="#ft">Contact</a>
           </motion.li>
         </ul>
       </div>
@@ -63,13 +63,18 @@ const FooterDownSect = () => {
         </motion.h2>
         <ul>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Front end web development
+            <a href="mailto:floriandollani15@gmail.com">
+              Front end web development
+            </a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Full stack web development
+            <a href="mailto:floriandollani15@gmail.com">
+              {" "}
+              Full stack web development
+            </a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
-            Code service
+            <a href="mailto:floriandollani15@gmail.com">Code service</a>
           </motion.li>
         </ul>
       </div>
@@ -82,19 +87,26 @@ const FooterDownSect = () => {
             <span>
               <PhoneIcn />
             </span>{" "}
-            +355 68 839 3968
+            <a href="tel:+355 68 839 3968">+355 68 839 3968</a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
             <span>
               <EmailIcn />
             </span>{" "}
-            floriandollani15@gmail.com
+            <a href="mailto:floriandollani15@gmail.com">
+              floriandollani15@gmail.com
+            </a>
           </motion.li>
           <motion.li variants={vrTextHead} initial="init" whileInView="anim">
             <span>
               <FbIcn />
             </span>{" "}
-            Website profesionale
+            <a
+              href="http://www.facebook.com/profile.php?id=100095043607448"
+              target="_blank"
+            >
+              Website profesionale
+            </a>
           </motion.li>
         </ul>
       </div>

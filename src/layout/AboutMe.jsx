@@ -5,12 +5,7 @@ const AboutMe = () => {
   const vrTextHead = vrPhHeroText();
 
   return (
-    <section
-      className="about-us"
-      id="ab"
-      aria-label="About Us Section"
-      data-observer
-    >
+    <section className="about-us" id="ab" aria-label="About Us Section">
       <motion.h1 variants={vrTextHead} initial="init" whileInView="anim">
         About Us
       </motion.h1>
@@ -30,7 +25,9 @@ const AboutMe = () => {
         >
           {/* <img src="" alt="Profile image" /> */}
           <div className="about-us__card__left-cont__img-perkohshem"></div>
-          <button>Contact</button>
+          <button>
+            <a href="mailto:floriandollani15@gmail.com">Contact</a>
+          </button>
         </motion.div>
         <motion.p variants={vrTextHead}>
           Hello! I’m a _front end web developer_ ,But also i can do full stack

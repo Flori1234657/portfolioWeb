@@ -32,7 +32,10 @@ const OptPc = () => {
       </ul>
       <div aria-label="CTA buton's group">
         <motion.button whileTap={{ scale: 0.9 }}>Get My Cv</motion.button>
-        <motion.button whileTap={{ scale: 0.9 }}>Hire Me</motion.button>
+        <motion.button whileTap={{ scale: 0.9 }}>
+          {" "}
+          <a href="mailto:floriandollani15@gmail.com">Hire Me</a>
+        </motion.button>
       </div>
     </nav>
   );

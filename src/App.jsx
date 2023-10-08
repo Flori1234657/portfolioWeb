@@ -1,10 +1,12 @@
+import { lazy, Suspense } from "react";
 import Nav from "./navBar/Nav";
-import Home from "./layout/Home";
-import Services from "./layout/Services";
-import AboutMe from "./layout/AboutMe";
-import MySkills from "./layout/MySkills";
-import Projects from "./layout/Projects";
-import Footer from "./layout/Footer";
+
+const Home = lazy(() => import("./layout/Home"));
+const Services = lazy(() => import("./layout/Services"));
+const AboutMe = lazy(() => import("./layout/AboutMe"));
+const MySkills = lazy(() => import("./layout/MySkills"));
+const Projects = lazy(() => import("./layout/Projects"));
+const Footer = lazy(() => import("./layout/Footer"));
 
 function App() {
   return (
@@ -12,14 +14,16 @@ function App() {
       <header>
         <Nav />
       </header>
-      <main>
-        <Home />
-        <Services />
-        <AboutMe />
-        <MySkills />
-        <Projects />
-      </main>
-      <Footer />
+      <Suspense fallback={<span id="first-loader"></span>}>
+        <main>
+          <Home />
+          <Services />
+          <AboutMe />
+          <MySkills />
+          <Projects />
+        </main>
+        <Footer />
+      </Suspense>
     </>
   );
 }

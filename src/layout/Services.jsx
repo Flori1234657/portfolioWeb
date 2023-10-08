@@ -29,7 +29,7 @@ const Services = () => {
           initial="init"
           whileInView="anim"
         >
-          Let's Talk
+          <a href="mailto:floriandollani15@gmail.com">Let's Talk</a>
         </motion.button>
       </div>
     </section>

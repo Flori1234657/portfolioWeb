@@ -139,7 +139,7 @@ const MySkills = () => {
         initial="init"
         whileInView="anim"
       >
-        Interested?
+        <a href="mailto:floriandollani15@gmail.com">Interested?</a>
       </motion.button>
     </section>
   );

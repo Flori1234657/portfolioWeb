@@ -27,7 +27,7 @@ const Home = () => {
           whileInView="anim"
           whileTap={{ scale: 0.9 }}
         >
-          Hire Me
+          <a href="mailto:floriandollani15@gmail.com">Hire Me</a>
         </motion.button>
       </section>
       <motion.img
@@ -36,7 +36,6 @@ const Home = () => {
         whileInView="anim"
         src={ProfilePlaceholdr}
         alt="Photo of the person"
-        loading="lazy"
       />
       <h3>
         Scroll Down <ArrIcn />

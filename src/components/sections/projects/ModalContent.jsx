@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BsFillArrowRightCircleFill as ImgChangeIcn } from "react-icons/bs";
+import { MdSwipeLeft as ImgChangeIcn } from "react-icons/md";
 import { AiFillCloseCircle as CloseIcn } from "react-icons/ai";
 import {
   KsI1,
@@ -12,15 +12,11 @@ import {
   FcI2,
   FcI3,
 } from "../../../assets";
+import { useWindowWidth } from "../../../hooks/useWindowWidth";
 
 const ModalContent = ({ imgT, refHook }) => {
   const [imgsArr, setImgsArr] = useState([]);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % imgsArr.length);
-  };
+  const windowWidth = useWindowWidth();
 
   useEffect(() => {
     switch (imgT) {
@@ -37,13 +33,25 @@ const ModalContent = ({ imgT, refHook }) => {
         setImgsArr([]);
         break;
     }
+
+    return () => {
+      setImgsArr([]);
+    };
   }, [imgT]);
 
   return (
     <>
-      <img src={imgsArr[currentIndex]} loading="lazy" alt="image's" />
+      <div
+        className="img-carousel-cont__scroll-cont"
+        aria-label="Image's scroll container"
+      >
+        {" "}
+        <img src={imgsArr[0]} alt="image's" loading="lazy" />
+        <img src={imgsArr[1]} alt="image's" loading="lazy" />
+        <img src={imgsArr[2]} alt="image's" loading="lazy" />
+      </div>
 
-      <ImgChangeIcn onClick={nextImage} />
+      {windowWidth < 1200 ? <ImgChangeIcn /> : ""}
       <CloseIcn
         onClick={() => {
           refHook.current.close();

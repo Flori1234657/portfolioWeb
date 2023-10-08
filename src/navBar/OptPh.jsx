@@ -76,7 +76,11 @@ const OptPh = () => {
               transition={{ type: "spring", stiffness: 50 }}
               whileTap={{ scale: 0.9 }}
             >
-              {el.txt}
+              {el.txt === "Hire Me" ? (
+                <a href="mailto:floriandollani15@gmail.com">Hire Me</a>
+              ) : (
+                el.txt
+              )}
             </motion.button>
           ))}
         </div>
