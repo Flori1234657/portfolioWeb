@@ -42,7 +42,7 @@
         font-size: var.$size1-max599;
         margin-top: 1em;
         @include mix.flex-col-between();
-        h3 {
+        h2 {
           @include mix.font(
             var.$quickSand,
             var.$size5-max599,

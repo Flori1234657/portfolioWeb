@@ -35,7 +35,7 @@
     .projects__container__txt-and-btn-info-cont {
       width: 90%;
       @include mix.flex-col-between($al: center);
-      h3 {
+      h2 {
         @include mix.font(
           var.$quickSand,
           var.$size1-max599,

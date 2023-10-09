@@ -50,9 +50,9 @@ main {
     img {
       font-size: var.$sizeP-max599;
       padding: 5em 0;
-      width: 90%;
+      width: 100%;
     }
-    h3 {
+    h2 {
       @include mix.font(
         var.$quickSand,
         var.$size3-max599,

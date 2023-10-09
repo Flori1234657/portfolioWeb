@@ -27,7 +27,7 @@ const Cards = () => {
           className="services__cardCont__card__right"
           aria-label="Card text and btn group"
         >
-          <h3>Front End Web Development</h3>
+          <h2>Front End Web Development</h2>
           <p>
             Transform design into a real website.Also if you don’t have a pre
             made design we can made it.
@@ -52,7 +52,7 @@ const Cards = () => {
           className="services__cardCont__card__right"
           aria-label="Card text and btn group"
         >
-          <h3>Full Stack Web Development</h3>
+          <h2>Full Stack Web Development</h2>
           <p>
             Do you want a powerful website?This service has both front-end and
             back-end with Firebase.
@@ -77,7 +77,7 @@ const Cards = () => {
           className="services__cardCont__card__right"
           aria-label="Card text and btn group"
         >
-          <h3>Web Udate or Error Fixing Service</h3>
+          <h2>Web Udate or Error Fixing Service</h2>
           <p>
             Do you want a new update on your web?
             {windowWidth < 1200

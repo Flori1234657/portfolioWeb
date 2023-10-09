@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { vrPhHeroText, vrAboutCard } from "../framerMotion/variants";
+import FooterImg from "../assets/profile/aboutImg.webp";
 
 const AboutMe = () => {
   const vrTextHead = vrPhHeroText();
@@ -23,15 +24,25 @@ const AboutMe = () => {
           className="about-us__card__left-cont"
           aria-label="About us card image and btn container"
         >
-          {/* <img src="" alt="Profile image" /> */}
-          <div className="about-us__card__left-cont__img-perkohshem"></div>
+          <div
+            aria-label="About us Img Container"
+            className="about-us__card__left-cont__img-container"
+          >
+            <img src={FooterImg} alt="Profile image" />
+          </div>
           <button>
             <a href="mailto:floriandollani15@gmail.com">Contact</a>
           </button>
         </motion.div>
         <motion.p variants={vrTextHead}>
           Hello! I’m a _front end web developer_ ,But also i can do full stack
-          website/webApp using Firebase for backend.I’m a <span>certified</span>{" "}
+          website/webApp using Firebase for backend.I’m a{" "}
+          <a
+            href="https://drive.google.com/file/d/1-51H19ETtsdrmmoQhI5l-DeUIjBGB1ww/view?usp=drive_link"
+            target="_blank"
+          >
+            certified
+          </a>{" "}
           web developer with 1 year of hard work trying to master web
           development.
           <br />

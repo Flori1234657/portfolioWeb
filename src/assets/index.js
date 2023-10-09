@@ -23,10 +23,3 @@ export { default as FirebaseIcn } from "./icons/firebase.webp";
 export { default as GitHubIcn } from "./icons/github.webp";
 export { default as FigmaIcn } from "./icons/figma.webp";
 export { default as MuiIcn } from "./icons/material-ui.webp";
-
-//Min Imgs for blur bckg InshaaAllah
-export { default as ImgKsPCMin } from "./images/3proj/kHpcMin.webp";
-export { default as ImgDbPcMin } from "./images/3proj/dbPcMin.webp";
-export { default as ImgFcPcMin } from "./images/3proj/fncPcMin.webp";
-export { default as ImgDashboardPhMin } from "./images/dbPhMin.webp";
-export { default as ImgFinancdPhMin } from "./images/fcPhMin.webp";

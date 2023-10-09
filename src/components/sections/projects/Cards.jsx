@@ -41,9 +41,9 @@ const Cards = ({
         className="projects__container__txt-and-btn-info-cont"
         aria-label="Group for text info and button's"
       >
-        <motion.h3 variants={vrTextHead} initial="init" whileInView="anim">
+        <motion.h2 variants={vrTextHead} initial="init" whileInView="anim">
           {title}
-        </motion.h3>
+        </motion.h2>
         <motion.p variants={vrTextHead} initial="init" whileInView="anim">
           {desc}
         </motion.p>

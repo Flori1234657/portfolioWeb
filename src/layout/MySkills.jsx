@@ -33,9 +33,9 @@ const MySkills = () => {
         className="my-skills__skills-cont --core-tech"
         aria-label="Core tech skill's icon's container"
       >
-        <motion.h3 variants={vrMySkillsLabel} initial="init" whileInView="anim">
+        <motion.h2 variants={vrMySkillsLabel} initial="init" whileInView="anim">
           Core Tech
-        </motion.h3>
+        </motion.h2>
         {[
           { src: HtmlIcn, alt: "Html" },
           { src: CssIcn, alt: "Css" },
@@ -67,9 +67,9 @@ const MySkills = () => {
         className="my-skills__skills-cont --library"
         aria-label="Library skill's icon's container"
       >
-        <motion.h3 variants={vrMySkillsLabel} initial="init" whileInView="anim">
+        <motion.h2 variants={vrMySkillsLabel} initial="init" whileInView="anim">
           Library
-        </motion.h3>
+        </motion.h2>
         {[
           { src: FirebaseIcn, alt: "Firebase" },
           { src: ReactIcn, alt: "React" },
@@ -100,9 +100,9 @@ const MySkills = () => {
         className="my-skills__skills-cont --others"
         aria-label="Other skill's icon's container"
       >
-        <motion.h3 variants={vrMySkillsLabel} initial="init" whileInView="anim">
+        <motion.h2 variants={vrMySkillsLabel} initial="init" whileInView="anim">
           Other's
-        </motion.h3>
+        </motion.h2>
         {[
           { src: SassIcn, alt: "Sass" },
           { src: TsIcn, alt: "Typescript" },

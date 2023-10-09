@@ -1,7 +1,7 @@
 import { HiArrowNarrowDown as ArrIcn } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { vrPhHeroText, vrPhHeroImg } from "../framerMotion/variants";
-import ProfilePlaceholdr from "../assets/profile/placeholder.webp";
+import ProfileImage from "../assets/profile/mainImg.webp";
 
 const Home = () => {
   const h1variant = vrPhHeroText();
@@ -34,12 +34,12 @@ const Home = () => {
         variants={vrPhHeroImg}
         initial="init"
         whileInView="anim"
-        src={ProfilePlaceholdr}
+        src={ProfileImage}
         alt="Photo of the person"
       />
-      <h3>
+      <h2>
         Scroll Down <ArrIcn />
-      </h3>
+      </h2>
     </section>
   );
 };

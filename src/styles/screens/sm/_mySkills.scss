@@ -29,7 +29,7 @@
       font-size: var.$sizeP-max599;
       padding: 1em 0;
     }
-    > h3 {
+    h2 {
       @include mix.font(
         var.$martel,
         var.$size3-max599,
