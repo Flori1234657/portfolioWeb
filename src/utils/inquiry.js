@@ -1,9 +1,9 @@
 const data = new Date();
 import emailjs from "emailjs-com";
 
-const SERVICE_ID = process.env.REACT_APP_EMAIL_JS_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_EMAIL_JS_TEMPLATE_ID;
-const API_KEY = process.env.REACT_APP_EMAIL_JS_API_KEY;
+const SERVICE_ID = import.meta.env.VITE_REACT_APP_EMAIL_JS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_REACT_APP_EMAIL_JS_TEMPLATE_ID;
+const API_KEY = import.meta.env.VITE_REACT_APP_EMAIL_JS_API_KEY;
 
 export const sendEmail = (userEmail) => {
   emailjs
@@ -11,7 +11,7 @@ export const sendEmail = (userEmail) => {
       SERVICE_ID,
       TEMPLATE_ID,
       {
-        from_name: `${userEmail}`, // gjej zgjidhje nuk po e mer nga kjo
+        from_name: `${userEmail}`,
       },
       API_KEY
     )

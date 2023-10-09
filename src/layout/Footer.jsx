@@ -3,7 +3,7 @@ import { vrPhHeroText } from "../framerMotion/variants";
 import { motion } from "framer-motion";
 import FooterDownSect from "../components/footer/FooterDownSect";
 import { useWindowWidth } from "../hooks/useWindowWidth";
-// import { sendEmail } from "../utils/inquiry";
+import { sendEmail } from "../utils/inquiry";
 
 const Footer = () => {
   const vrTextHead = vrPhHeroText();
@@ -26,7 +26,7 @@ const Footer = () => {
           aria-label="Email request form"
           onSubmit={(e) => {
             e.preventDefault();
-            // sendEmail(inputRef.current.value); Bëj enable para se ti bësh build InshaaAllah
+            sendEmail(inputRef.current.value);
             inputRef.current.value = "";
           }}
         >
