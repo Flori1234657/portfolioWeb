@@ -32,10 +32,7 @@ const OptPc = () => {
       </ul>
       <div aria-label="CTA buton's group">
         <motion.button whileTap={{ scale: 0.9 }}>
-          <a
-            href="https://drive.google.com/file/d/1v8kxxtGBVSyGamQTH7zryuqGL5O9F4GN/view?usp=drive_link"
-            target="_blank"
-          >
+          <a href="https://docs.google.com/document/d/1pXj9LyYDIwLx-916igGASFiYZiEuv5P_BAvEypKiKHI/edit?usp=drive_link">
             Get My Cv
           </a>
         </motion.button>
