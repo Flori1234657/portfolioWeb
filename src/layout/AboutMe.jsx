@@ -37,13 +37,10 @@ const AboutMe = () => {
         <motion.p variants={vrTextHead}>
           Hello! I’m a _front end web developer_ ,But also i can do full stack
           website/webApp using Firebase for backend.I’m a{" "}
-          <a
-            href="https://drive.google.com/file/d/1-51H19ETtsdrmmoQhI5l-DeUIjBGB1ww/view?usp=drive_link"
-            target="_blank"
-          >
+          <a href="https://drive.google.com/file/d/1-51H19ETtsdrmmoQhI5l-DeUIjBGB1ww/view?usp=drive_link">
             certified
           </a>{" "}
-          web developer with 1 year of hard work trying to master web
+          web developer with about 3 years of hard work trying to master web
           development.
           <br />
           <br />
