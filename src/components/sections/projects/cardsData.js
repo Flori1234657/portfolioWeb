@@ -1,9 +1,9 @@
 import {
   ImgDashboardPh,
-  ImgFinancdPh,
+  ImgShqipComputersPh,
   ImgKsPC,
   ImgDbPc,
-  ImgFcPc,
+  ImgShqipComputersPc,
   ImgKsPh,
 } from "../../../assets";
 
@@ -29,12 +29,13 @@ const data = [
     animType: "mn",
   },
   {
-    imgPh: ImgFinancdPh,
-    imgPc: ImgFcPc,
-    title: "Gjeniu Buxhetor",
-    desc: `This is a financing and budgeting webApp,it can help user's manage
-  their spending's and also set financing goal's to save more money.`,
-    imgVer: "fc",
+    imgPh: ImgShqipComputersPh,
+    imgPc: ImgShqipComputersPc,
+    title: "Shqip Computers",
+    desc: `This is a full-stack webApp for a computer shop. It is build
+    with React Ts and Strapi for backend. Here user's can buy computer's
+    searching and filtering them.`,
+    imgVer: "shqPc",
     animType: "pl",
   },
 ];

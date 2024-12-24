@@ -8,9 +8,9 @@ import {
   DbI1,
   DbI2,
   DbI3,
-  FcI1,
-  FcI2,
-  FcI3,
+  ShqipComputers1,
+  ShqipComputers2,
+  ShqipComputers3,
 } from "../../../assets";
 import { useWindowWidth } from "../../../hooks/useWindowWidth";
 
@@ -26,8 +26,8 @@ const ModalContent = ({ imgT, refHook }) => {
       case "db":
         setImgsArr([DbI1, DbI2, DbI3]);
         break;
-      case "fc":
-        setImgsArr([FcI1, FcI2, FcI3]);
+      case "shqPc":
+        setImgsArr([ShqipComputers1, ShqipComputers2, ShqipComputers3]);
         break;
       default:
         setImgsArr([]);
