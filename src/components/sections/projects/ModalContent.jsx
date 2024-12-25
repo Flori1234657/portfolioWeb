@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { MdSwipeLeft as ImgChangeIcn } from "react-icons/md";
 import { AiFillCloseCircle as CloseIcn } from "react-icons/ai";
 import {
-  KsI1,
-  KsI2,
-  KsI3,
+  RestorantNur1,
+  RestorantNur2,
+  RestorantNur3,
   DbI1,
   DbI2,
   DbI3,
@@ -20,8 +20,8 @@ const ModalContent = ({ imgT, refHook }) => {
 
   useEffect(() => {
     switch (imgT) {
-      case "ks":
-        setImgsArr([KsI1, KsI2, KsI3]);
+      case "rstNur":
+        setImgsArr([RestorantNur1, RestorantNur2, RestorantNur3]);
         break;
       case "db":
         setImgsArr([DbI1, DbI2, DbI3]);

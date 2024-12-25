@@ -1,21 +1,21 @@
 import {
   ImgDashboardPh,
   ImgShqipComputersPh,
-  ImgKsPC,
+  ImgRestorantNurPc,
   ImgDbPc,
   ImgShqipComputersPc,
-  ImgKsPh,
+  ImgRestorantNurPh,
 } from "../../../assets";
 
 const data = [
   {
-    imgPh: ImgKsPh,
-    imgPc: ImgKsPC,
-    title: "Ks Hotel",
-    desc: `A webApp for an imaginary Hotel on Ksamil/Albania.Here user's can
-  book their room's and they will wait for the host respond.Also this
-  web have an admin panel.`,
-    imgVer: "ks",
+    imgPh: ImgRestorantNurPh,
+    imgPc: ImgRestorantNurPc,
+    title: "Restorant Nur",
+    desc: `A MERN-stack website for a restaurant. Here user's can see the
+    dynamic menu, make a reservation, add dishes to wishlist and many other
+    features. Also for state management Zustand is used.`,
+    imgVer: "rstNur",
     animType: "pl",
   },
   {
