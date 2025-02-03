@@ -79,7 +79,7 @@ const OptPh = () => {
               {el.txt === "Hire Me" ? (
                 <a href="mailto:floriandollani15@gmail.com">Hire Me</a>
               ) : (
-                <a href="https://docs.google.com/document/d/1pXj9LyYDIwLx-916igGASFiYZiEuv5P_BAvEypKiKHI/edit?usp=drive_link">
+                <a href="https://drive.google.com/file/d/1UMTdw0AoLIISHOdDY3t1oBqr-taY1luR/view?usp=drive_link">
                   Get My Cv
                 </a>
               )}
